@@ -1,14 +1,3 @@
-<!-- 
-	List of services
-
-	New Construction
-	Restoration & Renovation
-	Architectural Detective Work
-	Green Practices
-	Real Estate Purchase Consultation
-
- -->
-
 <div id="homepage-services">
 	<div class="text-center">
 		<h2>Our Specialities</h2>

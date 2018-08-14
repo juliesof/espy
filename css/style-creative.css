@@ -46,9 +46,8 @@
 .masonry-layout {
 	color: #FFE39B;
 }
-.grid-sizer,
 .grid-item {
-	width: 35%;
+	width: 41.5%;
 	height: 300px;
 	background-color: #324851;
 	border: solid #FFE39B 1px;

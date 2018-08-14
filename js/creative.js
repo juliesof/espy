@@ -5,12 +5,10 @@
 jQuery( document ).ready(function( $ ){
 	$('.masonry-layout').isotope({
 		itemSelector: '.grid-item',
-		percentPosition: true,
 		layoutMode: 'masonry',
 		masonry: {
-			// columnWidth: '.grid-sizer',
-			columnWidth: 50,
-			gutter: 5
+			columnWidth: 10,
+			gutter: 10
 		}
 	});
 });
