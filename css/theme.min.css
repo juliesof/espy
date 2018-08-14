@@ -45,3 +45,46 @@
 }
 
 /* Homepage Services */
+.masonry-layout {
+	display: flex;
+	flex-wrap: wrap;
+	color: #FFE39B;
+}
+.masonry-layout > div {
+	text-align: center;
+	margin: 5px;
+}
+.masonry-layout__column {
+	flex-direction: column;
+}
+.masonry-layout__row {
+	flex-direction: row;
+}
+.masonry-layout__column > .masonry-layout__panel {
+	border: solid #FFE39B 1px;
+	background-color: #7DA3A1;
+	max-width: 23%;
+	flex-grow: 2;
+}
+.masonry-layout__row > .masonry-layout__panel--1 {
+	flex-grow: 1;
+	max-width: 23%;
+	background-color: #86AC41;
+	border: solid #FFE39B 1px;
+}
+.masonry-layout__row > .masonry-layout__panel--2 {
+	flex-grow: 2;
+	max-width: 45%;
+	background-color: #324851;
+	border: solid #FFE39B 1px;
+}
+
+
+
+
+
+
+
+
+
+
