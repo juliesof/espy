@@ -8,7 +8,7 @@ $('.masonry-layout').isotope({
 	percentPosition: true,
 	layoutMode: 'masonry',
 	masonry: {
-		columnWidth: '.grid-sizer'
-		rowHeight: 
+		columnWidth: '.grid-sizer',
+		gutter: 10
 	}
 })
