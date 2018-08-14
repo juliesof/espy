@@ -8,8 +8,9 @@ jQuery( document ).ready(function( $ ){
 		percentPosition: true,
 		layoutMode: 'masonry',
 		masonry: {
-			columnWidth: '.grid-sizer',
-			gutter: 10
+			// columnWidth: '.grid-sizer',
+			columnWidth: 50,
+			gutter: 5
 		}
 	});
 });

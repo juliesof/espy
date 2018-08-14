@@ -48,9 +48,7 @@
 }
 .grid-sizer,
 .grid-item {
-	position: relative;
-	float: left;
-	width: 30%;
+	width: 35%;
 	height: 300px;
 	background-color: #324851;
 	border: solid #FFE39B 1px;
@@ -59,10 +57,12 @@
 }
 .grid-item--height2 {
 	background-color: #7DA3A1;
-	height: 600px;
+	width: 25%;
+	height: 617px;
 }
 .grid-item--width2 {
 	background-color: #86AC41;
-	width: 60%;
+	width: 68%;
+	height: 300px;
 }
 
