@@ -1,3 +1,64 @@
+/* Table of Content
+
+* Utility classes
+* Homepage Hero
+* Homepage Welcome
+* Homepage Services
+
+*/
+
+/* Homepage Hero */
 #hero {
-	background-color: green;
+	background: center no-repeat url('http://localhost:8888/espy/wp-content/uploads/2018/08/ParsonsTeardown1-1440px.jpg');
+	width: 100vw;
+	height: 100vh;
+	position: relative;
 }
+#hero-text {
+	margin-top: 10%;
+	font-size: 35px;
+	color: white;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+}
+#hero-cta {
+	position: absolute;
+	top: 40%;
+	left: 45%;
+}
+
+/* Homepage Welcome */
+#homepage-welcome {
+	display: flex;
+	justify-content: center;
+	background: center url('http://localhost:8888/espy/wp-content/uploads/2018/08/victorian-wallpaper.jpg');
+}
+#homepage-welcome-text{
+	max-width: 50%;
+	background-color: #FFE39B;
+	border-radius: 10px;
+	padding: 2.5%;
+	margin: 13% auto;
+}
+
+/* Homepage Services */
+.masonry-layout {
+	color: #FFE39B;
+}
+.grid-sizer,
+.grid-item {
+	width: 20%;
+	background-color: #324851;
+	border: solid #FFE39B 1px;
+}
+.grid-item--height2 {
+/*	border: solid #FFE39B 1px;
+*/	background-color: #7DA3A1;
+}
+.grid-item--width2 {
+	background-color: #86AC41;
+	/*border: solid #FFE39B 1px;*/
+	width: 40%;
+}
+
