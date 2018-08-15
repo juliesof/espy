@@ -33,19 +33,9 @@ jQuery( document ).ready(function( $ ){
 	// 			.addClass('telephone-icon-expanded');
 	// 	}
 	// }); // end TELEPHONE-icon function
-
-	$('.telephone-icon').on('click', function(){
-		if( $('.telephone-icon .telephone-icon-small') ) {
-			$(this)
-				.removeClass('telephone-icon-small')
-				.addClass('telephone-icon-expanded');
-		} 
-		else if( $('.telephone-icon .telephone-icon-expanded') ) {
-			$(this)
-				.css('background-color', 'green')
-				.removeClass('telephone-icon-expanded')
-				.addClass('telephone-icon-small');
-		}
+	var $tellyClick = $("#telephone-icon");
+	$tellyClick.on('click', function(){
+		$tellyClick.toggleClass("telephone-icon-small telephone-icon-expanded")
 	}); // end TELEPHONE-icon function
 
 }); // end document.ready
