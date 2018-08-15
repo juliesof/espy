@@ -11,9 +11,13 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper" id="wrapper-footer">
+	
+	<div id="cta-bar">
+		<div class="btn btn-primary">Call Today to Talk with Kris</div>
+	</div> <!-- end cta bar -->
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 

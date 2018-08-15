@@ -11,4 +11,13 @@ jQuery( document ).ready(function( $ ){
 			gutter: 10
 		}
 	});
+
+	$('#homepage-galleries').isotope({
+		itemSelector: '.hp-gallery-item',
+		layoutMode: 'masonry',
+		masonry: {
+			columnWidth: 10,
+			gutter: 10
+		}
+	});
 });
