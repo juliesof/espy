@@ -3,12 +3,12 @@
  *
  */
 jQuery( document ).ready(function( $ ){
-	$('.masonry-layout').isotope({
-		itemSelector: '.grid-item',
-		layoutMode: 'masonry',
+	var $servicesGrid = $("#services-grid")
+	$servicesGrid.isotope({
+		itemSelector:	'.grid-item',
+		percentPosition: true,
 		masonry: {
-			columnWidth: 10,
-			gutter: 10
+			columnWidth: '.grid-sizer'
 		}
 	}); // end homepage SERVICES function
 

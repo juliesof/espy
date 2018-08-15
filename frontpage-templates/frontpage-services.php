@@ -3,7 +3,9 @@
 		<h2>Our Specialities</h2>
 	</div>
 	<!-- Begin Masonry Layout -->
-	<div class="masonry-layout">
+	<div id="services-grid" class="grid">
+		<!-- .grid-sizer empty element, only used for element sizing -->
+		<div class="grid-sizer"></div>
 		<div id="new-construction" class="grid-item grid-item--height2">
 			<h2>New Construction</h2>
 		</div>
