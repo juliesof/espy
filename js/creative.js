@@ -21,31 +21,22 @@ jQuery( document ).ready(function( $ ){
 		}
 	}); // end homepage GALLERIES function
 
-	// $('.telephone-icon').on('click', function(){
-	// 	if( $('.telephone-icon .telephone-icon-expanded') ){
-	// 		$(this)
-	// 			.removeClass('telephone-icon-expanded')
-	// 			.addClass('telephone-icon-small');
-	// 	} else if( $('.telephone-icon .telephone-icon-small') ) {
-	// 		$(this)
-	// 			.css('background-color', 'green')
-	// 			.removeClass('telephone-icon-small')
-	// 			.addClass('telephone-icon-expanded');
-	// 	}
-	// }); // end TELEPHONE-icon function
-
 	$('.telephone-icon').on('click', function(){
-		if( $('.telephone-icon .telephone-icon-small') ) {
+		if( $('.telephone-icon.telephone-icon-expanded') ){
 			$(this)
-				.removeClass('telephone-icon-small')
-				.addClass('telephone-icon-expanded');
-		} 
-		else if( $('.telephone-icon .telephone-icon-expanded') ) {
-			$(this)
-				.css('background-color', 'green')
 				.removeClass('telephone-icon-expanded')
 				.addClass('telephone-icon-small');
+		} else if( $('.telephone-icon.telephone-icon-small') ) {
+			$(this)
+				.css('background-color', 'green')
+				.removeClass('telephone-icon-small')
+				.addClass('telephone-icon-expanded');
 		}
 	}); // end TELEPHONE-icon function
+
+		// $('.telephone-icon').toggleClass('telephone-icon-small');
+ // end TELEPHONE-icon function
+
+	
 
 }); // end document.ready
