@@ -10,7 +10,7 @@ jQuery( document ).ready(function( $ ){
 			columnWidth: 10,
 			gutter: 10
 		}
-	});
+	}); // end homepage SERVICES function
 
 	$('#homepage-galleries').isotope({
 		itemSelector: '.hp-gallery-item',
@@ -19,5 +19,33 @@ jQuery( document ).ready(function( $ ){
 			columnWidth: 10,
 			gutter: 10
 		}
-	});
-});
+	}); // end homepage GALLERIES function
+
+	// $('.telephone-icon').on('click', function(){
+	// 	if( $('.telephone-icon .telephone-icon-expanded') ){
+	// 		$(this)
+	// 			.removeClass('telephone-icon-expanded')
+	// 			.addClass('telephone-icon-small');
+	// 	} else if( $('.telephone-icon .telephone-icon-small') ) {
+	// 		$(this)
+	// 			.css('background-color', 'green')
+	// 			.removeClass('telephone-icon-small')
+	// 			.addClass('telephone-icon-expanded');
+	// 	}
+	// }); // end TELEPHONE-icon function
+
+	$('.telephone-icon').on('click', function(){
+		if( $('.telephone-icon .telephone-icon-small') ) {
+			$(this)
+				.removeClass('telephone-icon-small')
+				.addClass('telephone-icon-expanded');
+		} 
+		else if( $('.telephone-icon .telephone-icon-expanded') ) {
+			$(this)
+				.css('background-color', 'green')
+				.removeClass('telephone-icon-expanded')
+				.addClass('telephone-icon-small');
+		}
+	}); // end TELEPHONE-icon function
+
+}); // end document.ready

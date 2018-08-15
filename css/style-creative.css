@@ -1,7 +1,7 @@
 /* Table of Content
 
 	Desktop
-* Utility classes
+* Constant Telephone Icon
 * Homepage Hero
 * Homepage Welcome
 * Homepage Services
@@ -15,6 +15,25 @@
 	Small
 */
 
+/* Constant Telephone Icon */
+.telephone-icon {
+	position: fixed;
+	bottom: 2%;
+	left: 1.5%;
+	background-color: pink;
+	z-index: 45;
+	cursor: pointer;
+}
+.telephone-icon-expanded {
+	height: 60px;
+	width: 270px;
+	border-radius: 35px;
+}
+.telephone-icon-small{
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
 /* Homepage Hero */
 #hero {
 	background: center no-repeat url('http://localhost:8888/espy/wp-content/uploads/2018/08/ParsonsTeardown1-1440px.jpg');
