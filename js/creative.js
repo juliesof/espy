@@ -22,9 +22,9 @@ jQuery( document ).ready(function( $ ){
 	}); // end homepage GALLERIES function
 
 	//toggle floating telephone icon number
-	var $tellyClick = $("#telephone-icon");
-	$tellyClick.on('click', function(){
-		$tellyClick.toggleClass("telephone-icon-small telephone-icon-expanded")
+	var $tellyToggle = $("#tellyToggle");
+	$tellyToggle.on('click', function(){
+		$tellyToggle.toggleClass("telephone-icon-small telephone-icon-expanded")
 	}); // end TELEPHONE-icon function
 
 }); // end document.ready
