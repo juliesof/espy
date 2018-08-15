@@ -82,7 +82,8 @@
 .grid-sizer,
 .grid-item {
 	width: 33.33333%;
-	height: 100px;
+	height: 200px;
+	/*padding-bottom: 33.33333%;*/
 }
 /* 2 columns wide */
 .grid-item--width2 { 
@@ -90,26 +91,24 @@
 }
 /* 2 columns tall */
 .grid-item--height2 {
-	height: 200px;
+	height: 400px;
 }
 
 .grid-item {
-/*	width: 41.5%;
-	height: 300px;*/
 	background-color: #324851;
 	border: solid #FFE39B 1px;
-/*	margin: 10px;
-	padding: 5px;*/
+	text-align: center;
 }
 .grid-item--height2 {
 	background-color: #7DA3A1;
-	/*width: 24.5%;
-	height: 617px;*/
 }
 .grid-item--width2 {
 	background-color: #86AC41;
-	/*width: 68%;
-	height: 300px;*/
+}
+.grid-item .service-header {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* Homepage Testimonials */
