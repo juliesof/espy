@@ -4,6 +4,7 @@
 * Homepage Hero
 * Homepage Welcome
 * Homepage Services
+* Homepage Testimonials
 
 */
 
@@ -13,6 +14,7 @@
 	width: 100vw;
 	height: 100vh;
 	position: relative;
+	margin-left: -15px;
 }
 #hero-text {
 	margin-top: 10%;
@@ -33,6 +35,8 @@
 	display: flex;
 	justify-content: center;
 	background: center url('http://localhost:8888/espy/wp-content/uploads/2018/08/victorian-wallpaper.jpg');
+	margin-left: -15px;
+	margin-right: -15px;
 }
 #homepage-welcome-text{
 	max-width: 50%;
@@ -45,6 +49,7 @@
 /* Homepage Services */
 .masonry-layout {
 	color: #FFE39B;
+	margin-right: -15px;
 }
 .grid-item {
 	width: 41.5%;
@@ -56,12 +61,27 @@
 }
 .grid-item--height2 {
 	background-color: #7DA3A1;
-	width: 25%;
+	width: 24.5%;
 	height: 617px;
 }
 .grid-item--width2 {
 	background-color: #86AC41;
 	width: 68%;
 	height: 300px;
+}
+
+/* Homepage Testimonials */
+#homepage-testimonials-layout {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.homepage-testimonial {
+	border: solid 1.5px black;
+	width: 40%;
+	padding: 2%;
+	margin: 2.5%;
+
+
 }
 
