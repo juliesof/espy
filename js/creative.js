@@ -14,12 +14,16 @@ jQuery( document ).ready(function( $ ){
 	}); // end homepage SERVICES function
 
 	//Homepage Gallery
-	$('#homepage-gallery').isotope({
+	// $('#homepage-gallery').isotope({
+	// 	itemSelector: '.hp-gallery-item',
+	// 	percentPosition: true,
+	// 	masonry: {
+	// 		columnWidth: '.gallery-sizer',
+	// 	}
+	// }); // end homepage GALLERIES function
+		$('#homepage-gallery').isotope({
 		itemSelector: '.hp-gallery-item',
-		percentPosition: true,
-		masonry: {
-			columnWidth: '.gallery-sizer',
-		}
+		layoutMode: 'masonry',
 	}); // end homepage GALLERIES function
 
 	//Service Gallery Page
