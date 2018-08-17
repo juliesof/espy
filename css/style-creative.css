@@ -1,6 +1,7 @@
 /* Table of Content
 
-	Desktop
+	Base
+* Utilities
 * Constant Telephone Icon
 * Frontpage Hero
 * Frontpage Welcome
@@ -8,15 +9,45 @@
 * Frontpage Testimonials
 * Frontpage Galleries
 * Services Galleries Page
+* Single Service Template
 
-	Medium
+	Extra Small Devices
+* Frontpage Hero
+
+	Medium Devices
 * Medium Frontpage Testimonials
 * Medium Frontpage Galleries
 
-	Small
-* Small Frontpage Galleries
-
+	Large Devices
+* Frontpage Galleries
+* Large Single Service Template
 */
+
+/* Utilities*/
+/* Header content centered */
+.header-content {
+	position: absolute;
+	text-align: center;
+	font-size: 1.1rem;
+	line-height: 1.5;
+	margin-right: auto;
+	margin-left: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+}
+.header-text {
+	background: linear-gradient(
+		to right, 
+		rgba(255, 230, 255, 0),
+		rgba(255, 230, 255, .7) 20%,
+		rgba(255, 230, 255, 0) 100%
+		);
+	color: white;
+	line-height: 1.5;
+	margin-bottom: 15px;
+	min-width: 250px;
+}
 
 /* Constant Telephone Icon */
 #tellyToggle {
@@ -43,29 +74,6 @@
 	background: center no-repeat url('/espy/wp-content/uploads/2018/08/ParsonsTeardown1-1440px.jpg');
 	background-size: cover;
 	position: relative;
-}
-.hero-content {
-	position: absolute;
-	text-align: center;
-	font-size: 1.1rem;
-	line-height: 1.5;
-	margin-right: auto;
-	margin-left: auto;
-	top: 50%;
-	left: 50%;
-	transform: translate( -50%, -50%);
-}
-.hero-text {
-	background: linear-gradient(
-		to right, 
-		rgba(255, 230, 255, 0),
-		rgba(255, 230, 255, .7) 20%,
-		rgba(255, 230, 255, 0) 100%
-		);
-	color: white;
-	line-height: 1.5;
-	margin-bottom: 15px;
-	min-width: 250px;
 }
 #hero-cta {
 }
@@ -178,6 +186,18 @@
 #cb-gallery-grid .wp-block-gallery {
 	margin: 0;
 }
+
+/* Single Service Template */
+.service-content {
+	margin: 8%;
+}
+.service-entry-header {
+	position: relative;
+}
+.service-entry-title{
+	position: absolute;
+}
+
 /* Extra Small Devices */
 @media(min-width: 450px) {
 	/* Frontpage Hero */
@@ -233,5 +253,13 @@
 		font-size: 2.5rem;
 		width: auto;
 		min-width: 600px
+	}
+	/* Large Single Service Template */
+	.service-content {
+		margin: 4% auto;
+    width: 80%;
+	}
+	.service-header-image {
+		height: 50%;
 	}
 }

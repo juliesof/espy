@@ -31,6 +31,11 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Advanced custom fields for this theme.
+ */
+require get_template_directory() . '/inc/custom-fields.php';
+
+/**
  * Custom pagination for this theme.
  */
 require get_template_directory() . '/inc/pagination.php';
