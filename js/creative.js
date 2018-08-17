@@ -3,7 +3,7 @@
  *
  */
 jQuery( document ).ready(function( $ ){
-	// //Homepage service grid
+	// //Frontpage service grid
 	// var $servicesGrid = $('#services-grid')
 	// $servicesGrid.isotope({
 	// 	itemSelector:	'.grid-item',
@@ -11,17 +11,17 @@ jQuery( document ).ready(function( $ ){
 	// 	masonry: {
 	// 		columnWidth: '.grid-sizer'
 	// 	}
-	// }); // end homepage SERVICES function
-	var $servicesGrid = $('#services-grid')
+	// }); // end frontpage SERVICES function
+	var $servicesGrid = $('#fp-services-grid')
 	$servicesGrid.isotope({
-		itemSelector:	'.grid-item',
+		itemSelector:	'.fp-service-item',
 		layoutMode: 'masonry'
-	}); // end homepage SERVICES function
+	}); // end frontpage SERVICES function
 
-		$('#homepage-gallery').isotope({
-		itemSelector: '.hp-gallery-item',
+		$('#fp-gallery-grid').isotope({
+		itemSelector: '.fp-gallery-item',
 		layoutMode: 'masonry',
-	}); // end homepage GALLERIES function
+	}); // end frontpage GALLERIES function
 
 	//Service Gallery Page
 	var $galMenu = $( '#cb-gallery-buttons' );
