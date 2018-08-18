@@ -12,28 +12,38 @@ jQuery( document ).ready(function( $ ){
 	// 		columnWidth: '.grid-sizer'
 	// 	}
 	// }); // end frontpage SERVICES function
-	var $servicesGrid = $('#fp-services-grid')
+
+	// Front Page Services Grid
+	var $servicesGrid = $('#fp-services-grid');
 	$servicesGrid.isotope({
-		itemSelector:	'.fp-service-item',
-		layoutMode: 'masonry'
+		itemSelector:	'.fp-service-item'
 	}); // end frontpage SERVICES function
 
-		$('#fp-gallery-grid').isotope({
-		itemSelector: '.fp-gallery-item',
-		layoutMode: 'masonry',
+	//Front Page Gallery Section
+	var $fp_gallery = $('#fp-gallery-grid');
+	$fp_gallery.isotope({
+		itemSelector: '.fp-gallery-item'
 	}); // end frontpage GALLERIES function
 
-	//Service Gallery Page
-	var $galMenu = $( '#cb-gallery-buttons' );
-		$galGrid = $( '#cb-gallery-grid' ).isotope({
-			filter: '.menu-gallery'
+	//Portfolio Gallery Page
+	var $textMenu 	= $( '#cb-gallery-buttons' );
+		$galMenu	= $( '.photo-menu' )
+		$galGrid 	= $( '#cb-gallery-grid' ).isotope({
+			itemSelector: '.cb-gallery-item',
+			percentPosition: true,
+			filter: '.photo-menu',
+			masonry: {
+				columnWidth: '.cb-gallery-spacer'
+			}
 		});
-	$galMenu.on('click','button',function(){
+	$textMenu.on('click','button',function(){
 		var filterValue = $(this).attr('data-filter');
 		$galGrid.isotope({ filter: filterValue });
-
 	});
-
+	$galMenu.click(function(){
+		var firstFilter = $(this).attr('data-filter');
+		$galGrid.isotope({ filter: firstFilter });
+	});
 
 	//toggle floating telephone icon number
 	var $tellyToggle = $('#tellyToggle');

@@ -3,16 +3,18 @@
 // Custom post types function 
 function create_custom_post_types(){
 // Create testimonials post type
-	register_post_type('services',
+	register_post_type('portfolio',
 		array(
 		'labels' => array(
-			'name' => __('Services'),
-			'singular_name' => __('Service'),
+			'name' => __('Portfolio'),
+			'singular_name' => __('Portfolio'),
 			),
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
-		'rewrite' => false,
+		'rewrite' => array (
+			'slug' => 'portfolio'
+			),
 		)
 	);
 }
