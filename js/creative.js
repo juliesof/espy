@@ -32,6 +32,7 @@ jQuery( document ).ready(function( $ ){
 			itemSelector: '.cb-gallery-item',
 			percentPosition: true,
 			filter: '.photo-menu',
+			stagger: 30,
 			masonry: {
 				columnWidth: '.cb-gallery-spacer'
 			}
