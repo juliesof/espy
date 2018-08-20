@@ -1,6 +1,6 @@
-<section id="frontpage-services">
-	<div class="text-center">
-		<h2>Our Specialities</h2>
+<section id="frontpage-services" class="mt-5">
+	<div class="text-center mb-5">
+		<h2>How Can We Help?</h2>
 	</div>
 	<!-- Begin Masonry Layout -->
 	<main id="fp-services-grid">
