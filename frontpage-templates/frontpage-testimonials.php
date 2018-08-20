@@ -1,4 +1,4 @@
-<section id="frontpage-testimonials" class="fp-section">
+<section id="frontpage-testimonials" class="fp-section mt-5">
 	<h2 class="text-center">Words from our Clients</h2>
 	<div id="fp-testimonials-layout" class="row">
 		<!-- Testimonial 1 -->
