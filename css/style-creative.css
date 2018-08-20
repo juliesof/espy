@@ -67,6 +67,9 @@
 
 
 /* Header content centered */
+.header-color {
+	background-color: #849D7A;
+}
 .header-content {
 	position: absolute;
 	text-align: center;

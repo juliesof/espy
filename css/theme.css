@@ -6005,12 +6005,12 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #6f31cd !important; }
+  background-color: #849D7A; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #5927a4 !important; }
+  background-color: #849D7A; }
 
 .bg-secondary {
   background-color: #6c757d !important; }
@@ -6018,7 +6018,7 @@ button.bg-primary:focus {
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #545b62 !important; }
+  background-color: #849D7A; }
 
 .bg-success {
   background-color: #28a745 !important; }
