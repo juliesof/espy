@@ -2,7 +2,7 @@
 
 // Custom post types function 
 function create_custom_post_types(){
-// Create testimonials post type
+// Create gallery/portfolio post type
 	register_post_type('portfolio',
 		array(
 		'labels' => array(
@@ -15,6 +15,20 @@ function create_custom_post_types(){
 		'rewrite' => array (
 			'slug' => 'portfolio'
 			),
+		)
+	);
+
+// Create services post type
+	register_post_type('services',
+		array(
+		'labels' => array(
+			'name' => __('Services'),
+			'singular_name' => __('Service'),
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_nav_menus' => true,
+		'rewrite' => false,
 		)
 	);
 }
