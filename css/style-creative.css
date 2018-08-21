@@ -70,6 +70,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 18px;
+	color: #333;
 }
 h1 {
 	font-family: 'Tangerine', cursive;
@@ -119,7 +120,7 @@ h2 {
 	position: fixed;
 	bottom: 2%;
 	left: 1.5%;
-	background-color: #FFE1D2;
+	background-color: #FFEEC6;
 	z-index: 45;
 	cursor: pointer;
 }
@@ -164,8 +165,8 @@ h1.slogan {
 }
 /* Frontpage Services */
 #fp-services-grid {
-	color: #FFE39B;
-	background-color: red;
+	color: #FFEEC6;
+	background-color: #845E9A;
 }
 .fp-service-item {
 	padding: 20px;
