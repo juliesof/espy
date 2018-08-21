@@ -42,22 +42,16 @@ $container   = 'container-fluid';
 					$img_count = 0;
 					$count = 0;
 					foreach($images[0] as $i){
-						echo [$i][$count];
 						if($i[$count] != null){
 							$img_count++;
 						}
 						$count++;
 					}
-
-					echo $img_count;
 			 ?>
 
 				<header class="entry-header service-entry-header">
 					<img src="<?php echo $header ?>">
-					<?php echo $img_count ?>
-					<div class="header-content">
-						<?php the_title( '<h1 class="entry-title header-text text-center">', '</h1>' ); ?>
-					</div>
+					<?php the_title( '<h1 class="service-entry-title text-center">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
 				<section class="service-content">
@@ -65,69 +59,92 @@ $container   = 'container-fluid';
 				</section>
 
 				<section class="bottom-images">
+
 					<?php // 1 image layout
 						if( $img_count == 1) { 
 					?>
-						<div>
-							1 image
+						<div class="row">
+							<div class="col-12 d-flex justify-content-center align-items-center">
+								<img src="<?php echo $image_1 ?>">
+							</div>
 						</div>
+
 					<?php  // 2 image layout
 						} elseif( $img_count == 2 ) { 
 					?>
-						<div>
-							2 images
+					<div class="row">
+						<div class="col-md-6">
+							<img src="<?php echo $image_1 ?>">
 						</div>
-						<div>
-							
+						<div class="col-md-6">
+							<img src="<?php echo $image_2 ?>">
 						</div>
+					</div>
+					
 					<?php  // 3 image layout
 						} elseif( $img_count == 3 ) { 
 					?>
-						<div>
-							3 images
+					<div class="row">
+						<div class="col-md-4">
+							<img src="<?php echo $image_1 ?>">
 						</div>
-						<div>
-							
+						<div class="col-md-4">
+							<img src="<?php echo $image_2 ?>">
 						</div>
-						<div>
-							
+						<div class="col-md-4">
+							<img src="<?php echo $image_3 ?>">
 						</div>
+					</div>	
+
 					<?php  // 4 image layout
 						} elseif( $img_count == 4 ) { 
 					?>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="<?php echo $image_1 ?>">
+							</div>
+							<div class="col-md-6">
+								<img src="<?php echo $image_2 ?>">
+							</div>
+						</div> <!-- end row 1 -->
+
+						<div class="row">
+							<div class="col-md-6">
+								<img src="<?php echo $image_3 ?>">
+							</div>
+							<div class="col-md-6">
+								<img src="<?php echo $image_4 ?>">
+							</div>
+						</div> <!-- end row 2 -->
+
 					<?php  // 5 image layout
 						} elseif( $img_count == 5 ) { 
 					?>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-						<div>
-							
-						</div>
-					<?php } else { ?>
-						<div>no images</div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="<?php echo $image_1 ?>">
+							</div>
+							<div class="col-md-6">
+								<img src="<?php echo $image_2 ?>">
+							</div>
+						</div> <!-- end row 1 -->
+
+						<div class="row">
+							<div class="col-md-4">
+								<img src="<?php echo $image_3 ?>">
+							</div>
+							<div class="col-md-4">
+								<img src="<?php echo $image_4 ?>">
+							</div>
+							<div class="col-md-4">
+								<img src="<?php echo $image_5 ?>">
+							</div>
+						</div> <!-- end row 2 -->
+
+					<?php } else { // no images ?>
+						<div></div>
 					<?php } ?>
+
 				</section>
 
 			<?php endwhile; // end of the loop. ?>

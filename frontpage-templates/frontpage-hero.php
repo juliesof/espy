@@ -2,4 +2,7 @@
 	<div class="header-content">
 		<h1 class="slogan">Every House Has a Story to Tell</h1>
 	</div>
+	<div class="scroll-icon">
+		
+	</div>
 </div>

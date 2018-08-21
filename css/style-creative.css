@@ -144,8 +144,6 @@ h2 {
 h1.slogan {
 	font-size: 35px;
 }
-#hero-cta {
-}
 
 /* Frontpage Welcome */
 #frontpage-welcome {
@@ -276,6 +274,24 @@ h1.slogan {
 }
 .service-entry-title{
 	position: absolute;
+	top: 15%;
+	left: 50%;	
+	transform: translate(-50%);
+	width: auto;
+	background: linear-gradient(
+		to right, 
+		rgba(255, 230, 255, 0),
+		rgba(50, 50, 50, .4) 20%,
+		rgba(50, 50, 50, .7) 50%,
+		rgba(50, 50, 50, .4) 80%,
+		rgba(255, 230, 255, 0) 100%
+		);
+	color: #FFEEC6;
+	line-height: 1.5;
+	min-width: 350px;
+	font-size: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /* Footer */
@@ -321,10 +337,17 @@ h1.slogan {
 
 } 
 	/* Frontpage Hero */
-	.hero-text {
-		font-size: 2rem;
-		min-width: 500px;
-	}
+.scroll-icon {
+	position: absolute;
+	bottom: 10%;
+	right: 1.5%;
+	background-color: #FFEEC6;
+	z-index: 45;
+	cursor: pointer;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
 	/* Frontpage Gallery */
 	.fp-gallery-item {
 		width: 50%;
@@ -396,14 +419,19 @@ h1.slogan {
 	.fp-testimonial {
 		max-width: 50%;
 	}
+	.service-entry-title {
+		min-width: 600px;
+		font-size: 120px;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
 	/* Large Single Service Template */
 	.service-content {
 		margin: 4% auto;
-		width: 80%;
+		width: 70%;
 	}
-	.service-header-image {
-		height: 50%;
-	}
+
+
 	/* Portfolio Gallery Page */
 	#cb-gallery-grid {
 		height: 80vh;
