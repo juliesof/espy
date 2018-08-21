@@ -21,7 +21,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php get_template_part( 'frontpage-templates/frontpage', 'hero' ); ?>
 				<?php get_template_part( 'frontpage-templates/frontpage', 'welcome' ); ?>
 				<?php get_template_part( 'frontpage-templates/frontpage', 'services' ); ?>
-				<?php get_template_part( 'frontpage-templates/frontpage', 'testimonials' ); ?>
+				<?php //get_template_part( 'frontpage-templates/frontpage', 'testimonials' ); ?>
 				<?php get_template_part( 'frontpage-templates/frontpage', 'gallery' ); ?>
 				<?php get_template_part( 'frontpage-templates/frontpage', 'cta' ); ?>
 

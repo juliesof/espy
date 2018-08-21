@@ -1,5 +1,5 @@
 <section id="frontpage-testimonials" class="fp-section mt-5">
-	<h2 class="text-center">Words from our Clients</h2>
+	<h1 class="text-center">Words from our Clients</h1>
 	<div id="fp-testimonials-layout">
 		<!-- Testimonial 1 -->
 		<div class="fp-testimonial flip-in-hor-bottom text-center">

@@ -10,6 +10,7 @@
 * Frontpage Galleries
 * Portfolio Gallery Page
 * Single Service Template
+* Footer
 
 	Extra Small Devices
 * Frontpage Hero
@@ -19,8 +20,9 @@
 * Medium Frontpage Galleries
 
 	Large Devices
-* Frontpage Galleries
+* Large Frontpage Welcome
 * Large Single Service Template
+* Large Frontpage Galleries
 * Portfolio Gallery Page
 */
 
@@ -64,7 +66,20 @@
     opacity: 1;
   }
 }
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 18px;
+}
+h1 {
+	font-family: 'Tangerine', cursive;
+	font-size: 48px;
 
+} 
+h2 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 32px;
+}
 
 /* Header content centered */
 .header-color {
@@ -84,17 +99,19 @@
 .header-content .slogan {
 	background: linear-gradient(
 		to right, 
-		rgba(255, 230, 255, 0),
-		rgba(50, 50, 50, .3) 20%,
-		rgba(255, 230, 255, 0) 100%
+		rgba(255, 230, 255, .2),
+		rgba(50, 50, 50, .4) 25%,
+		rgba(50, 50, 50, .7) 50%,
+		rgba(50, 50, 50, .4) 75%,
+		rgba(255, 230, 255, .2) 100%
 		);
 	color: white;
 	line-height: 1.5;
 	margin-bottom: 15px;
 	min-width: 250px;
 	text-shadow: 0 0 1px 1px rgba(0,0,0,.3);
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
 }
 
 /* Constant Telephone Icon */
@@ -123,6 +140,9 @@
 	background-size: cover;
 	position: relative;
 }
+h1.slogan {
+	font-size: 35px;
+}
 #hero-cta {
 }
 
@@ -136,7 +156,7 @@
 	margin-right: -15px;
 }
 #frontpage-welcome-text{
-	max-width: 50%;
+	max-width: 80%;
 	background-color: #FFE1D2;
 	border-radius: 10px;
 	padding: 2.5%;
@@ -202,7 +222,6 @@
 	padding: 20px;
 }
 #fp-gallery-grid .gallery-inner {
-	background: linear-gradient(#FDAE84, #ECC7C0, #8BcBC8);
 	height: 100%;
 	overflow: hidden;
 	position: relative;
@@ -267,6 +286,18 @@
 	position: absolute;
 }
 
+/* Footer */
+#wrapper-footer {
+	background-color: #6F6170;
+	color: white;
+}
+#wrapper-footer a {
+	color: white;
+}
+.site-footer {
+	text-align: center;
+}
+
 /* Extra Small Devices */
 @media(min-width: 450px) {
 	/* Frontpage Hero */
@@ -277,6 +308,13 @@
 }
 /* Medium Devices */
 @media(min-width: 576px) {
+
+	/* Utilities */
+	h1 {
+	font-family: 'Tangerine', cursive;
+	font-size: 70px;
+
+} 
 	/* Frontpage Hero */
 	.hero-text {
 		font-size: 2rem;
@@ -291,6 +329,9 @@
 }
 @media(min-width: 768px) {	
 	/* Frontpage Hero */
+	h1.slogan{
+		font-size: 50px;
+	}
 
 	/* Frontpage Services */
 	.fp-service-item--width2 { 
@@ -317,15 +358,33 @@
 		padding: 20px;
 	}
 }
+
+/* Large Devices */
 @media(min-width: 992px) {
+
+	/* Utilities */
+	h1 {
+	font-family: 'Tangerine', cursive;
+	font-size: 83px;
+	} 
+	h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 45px;
+	}
+
+/* Large Frontpage Hero */
 	#hero {
 		width: 100vw;
 		height: 100vh;
 	}
-	.hero-text {
-		font-size: 2.5rem;
+h1.slogan {
+		font-size: 60px;
 		width: auto;
 		min-width: 600px
+	}
+
+	#frontpage-welcome-text {
+		max-width: 50%;
 	}
 	/* front page testimonial */
 	/* force testimonials into two columns*/

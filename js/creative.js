@@ -49,7 +49,13 @@ jQuery( document ).ready(function( $ ){
 	//toggle floating telephone icon number
 	var $tellyToggle = $('#tellyToggle');
 	$tellyToggle.on('hover', function(){
-		$tellyToggle.toggleClass('telephone-icon-small telephone-icon-expanded')
+		$tellyToggle.toggleClass('telephone-icon-small telephone-icon-expanded'
+			)
+		// 	if($tellyToggle.hasClass('telephone-icon-small')){
+		// 	$tellyToggle.switchClass('telephone-icon-small', 'telephone-icon-expanded', 800);
+		// }else{
+		// 	$tellyToggle.switchClass('telephone-icon-expanded', 'telephone-icon-small', 800);
+		// }
 	}); // end TELEPHONE-icon function
 
 }); // end document.ready

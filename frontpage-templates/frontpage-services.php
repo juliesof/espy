@@ -1,6 +1,6 @@
 <section id="frontpage-services" class="mt-5">
 	<div class="text-center mb-5">
-		<h2>How Can We Help?</h2>
+		<h1>How Can We Help?</h1>
 	</div>
 	<!-- Begin Masonry Layout -->
 	<main id="fp-services-grid">
