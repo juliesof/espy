@@ -130,7 +130,7 @@
 #frontpage-welcome {
 	display: flex;
 	justify-content: center;
-	background: center url('/espy/wp-content/uploads/2018/08/Screen-Shot-2018-08-21-at-12.03.15-AM.png');
+	background: center url('/espy/wp-content/uploads/2018/08/damask-seamless-web.jpg');
 	background-size: contain;
 	margin-left: -15px;
 	margin-right: -15px;
@@ -181,14 +181,19 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	margin: 2rem 0;
 }
 .fp-testimonial {
-	border: solid 1.5px black;
-	width: 40%;
-	padding: 15px;
-	margin: 2rem auto;
+	margin-bottom: 1rem;
 }
-
+.fp-testimonial .quote-text {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	line-height: 2;
+	padding: 1rem 2rem 0;
+}
 /* Frontpage Galleries */
 /* fluid 3 columns */
 .fp-gallery-item {
@@ -206,8 +211,8 @@
     content: '';
     position: absolute;
     top: -50%;
-    right: -10%;
-    bottom: -50%;
+    right: -50%;
+    bottom: -65%;
     left: 16%;
     background: rgba(0,0,0,.22);
     transform: rotate(23deg);
@@ -300,6 +305,10 @@
 		width: 33.33333%;
 		height: 200px;
 	}
+	/* Frontpage Testimonials */
+	.fp-testimonial .quote-text {
+		padding-top: 3rem;
+	}
 	/* Frontpage Gallery */
 	.gallery-sizer,
 	.fp-gallery-item {
@@ -317,6 +326,11 @@
 		font-size: 2.5rem;
 		width: auto;
 		min-width: 600px
+	}
+	/* front page testimonial */
+	/* force testimonials into two columns*/
+	.fp-testimonial {
+		max-width: 50%;
 	}
 	/* Large Single Service Template */
 	.service-content {
@@ -343,4 +357,10 @@
 	.cb-gallery-item.photo-menu {
 		width: 33.33333%;
 	}
+}
+@media(min-width: 1200px) {
+	.fp-testimonial p {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}	
 }
