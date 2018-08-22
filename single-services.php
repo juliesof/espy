@@ -42,7 +42,7 @@ $container   = 'container-fluid';
 					$img_count = 0;
 					$count = 0;
 					foreach($images[0] as $i){
-						if($i[$count] != null){
+						if($i != null){
 							$img_count++;
 						}
 						$count++;
