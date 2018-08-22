@@ -21,6 +21,7 @@
 
 	Large Devices
 * Large Frontpage Welcome
+* Large Frontpage Testimonials
 * Large Single Service Template
 * Large Frontpage Galleries
 * Portfolio Gallery Page
@@ -93,7 +94,7 @@ h2 {
 	line-height: 1.5;
 	margin-right: auto;
 	margin-left: auto;
-	top: 47%;
+	top: 48%;
 	left: 50%;
 	transform: translate( -50%, -50%);
 }
@@ -101,9 +102,9 @@ h2 {
 	background: linear-gradient(
 		to right, 
 		rgba(255, 230, 255, 0),
-		rgba(50, 50, 50, .4) 20%,
+		rgba(50, 50, 50, .4) 14%,
 		rgba(50, 50, 50, .7) 50%,
-		rgba(50, 50, 50, .4) 80%,
+		rgba(50, 50, 50, .4) 87%,
 		rgba(255, 230, 255, 0) 100%
 		);
 	color: white;
@@ -155,14 +156,20 @@ h1.slogan {
 	margin-right: -15px;
 }
 #frontpage-welcome-text{
-	max-width: 80%;
+	max-width: 90%;
 	background-color: #849D7A;
 	color: #FFEEC6;
-	font-size: 20px;
+	font-size: 19px;
 	border-radius: 10px;
-	padding: 2.5%;
-	margin: 13% auto;
+	padding: 6% 3% 0 3%;
+	margin: 8% auto;
 }
+#frontpage-welcome-text span{
+	font-size: 45px;
+	font-family: "Tangerine", cursive;
+	line-height: .75;
+}
+
 /* Frontpage Services */
 #fp-services-grid {
 	color: #FFEEC6;
@@ -232,6 +239,9 @@ h1.slogan {
 }
 
 /* Frontpage Testimonials */
+#frontpage-testimonials {
+	padding: 3% 0 2%;
+}
 #fp-testimonials-layout {
 	display: flex;
 	flex-wrap: wrap;
@@ -270,11 +280,14 @@ h1.slogan {
     left: 63px;
     background: rgba(255, 238, 198,.4);
     background: rgba(255, 249, 198, 0.4); /*less red*/
+    background: rgba(88, 61, 62, 0.5); /*mink brown*/
+    background: rgba(60, 46, 61, 0.4); /*purple*/
     transform: rotate(23deg);
     transition: left .3s ease-in-out;
 }
 h3.image-title {
 	color: #3C2E3D;
+	color: #EEF7E3;
 	position: absolute;
 	top: 40%;
 	transform: rotate(-67deg);
@@ -334,6 +347,7 @@ h3.image-title {
 		rgba(255, 230, 255, 0) 100%
 		);
 	color: #FFEEC6;
+	color: white;
 	line-height: 1.5;
 	min-width: 350px;
 	font-size: 70px;
@@ -407,7 +421,17 @@ h3.image-title {
 	h1.slogan{
 		font-size: 50px;
 	}
-
+	/* Medium Frontpage Welcome */
+	#frontpage-welcome-text {
+		max-width: 65%;
+		padding: 2.5% 2.5% 1% 2.5%;
+		font-size: 22px;
+	}
+	#frontpage-welcome-text span {
+	font-size: 65px;
+	line-height: 0.75;
+	font-family: "Tangerine", cursive;
+}
 	/* Frontpage Services */
 	.fp-service-item--width2 { 
 		width: 66.66667%; 
@@ -440,11 +464,14 @@ h3.image-title {
 	/* Utilities */
 	h1 {
 	font-family: 'Tangerine', cursive;
-	font-size: 83px;
+	font-size: 75px;
 	} 
 	h2 {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 45px;
+	}
+	h3 {
+		font-size: 30px;
 	}
 
 /* Large Frontpage Hero */
@@ -455,13 +482,13 @@ h3.image-title {
 h1.slogan {
 		font-size: 67px;
 		width: auto;
-		min-width: 600px
+		min-width: 600px;
+		line-height: 2;
+		padding-left: 45px;
+		padding-right: 45px;
 	}
 
-	#frontpage-welcome-text {
-		max-width: 50%;
-	}
-	/* front page testimonial */
+	/* Large Frontpage Testimonial */
 	/* force testimonials into two columns*/
 	.fp-testimonial {
 		max-width: 50%;
