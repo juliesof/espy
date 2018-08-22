@@ -484,7 +484,7 @@ h1.slogan {
 	/* fluid 5 columns */
 	.cb-gallery-spacer,
 	.cb-gallery-item { 
-		width: 16.66666%; 
+		width: 33.33333%; 
 	}
 	/* 2 columns wide */
 	.cb-gallery-item--width2 { 
