@@ -3,31 +3,43 @@
 	<div id="fp-gallery-grid">
 		<div class="fp-gallery-item">
 			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/plant-in-window.jpeg">
+				<img src="/espy/wp-content/uploads/2018/08/menu-interior.jpg">
+				<h3 class="image-title">Interiors</h3>
 			</div>
 		</div>
 		<div class="fp-gallery-item">
-			<div class="gallery-inner"></div>
-		</div>
-
-		<div class="fp-gallery-item">
 			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/sink-e1534844978482.jpg">
+				<img src="/espy/wp-content/uploads/2018/08/ext-2.jpg">
+				<h3 class="image-title">Exteriors</h3>
 			</div>
 		</div>
 
 		<div class="fp-gallery-item">
 			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/outdoor-flowers.jpeg">
+				<img src="/espy/wp-content/uploads/2018/08/menu-kitchen.jpg">
+				<h3 class="image-title">Kitchens</h3>
 			</div>
 		</div>
 
 		<div class="fp-gallery-item">
-			<div class="gallery-inner"></div>
+			<div class="gallery-inner">
+				<img src="/espy/wp-content/uploads/2018/08/menu-bath.jpg">
+				<h3 class="image-title">Baths</h3>
+			</div>
 		</div>
 
 		<div class="fp-gallery-item">
-			<div class="gallery-inner"></div>
+			<div class="gallery-inner">
+				<img src="/espy/wp-content/uploads/2018/08/menu-cabinet.jpg">
+				<h3 class="image-title">Cabinetry</h3>
+			</div>
+		</div>
+
+		<div class="fp-gallery-item">
+			<div class="gallery-inner">
+				<img src="/espy/wp-content/uploads/2018/08/menu-bef-aft.jpg">
+				<h3 class="image-title">Before &amp; After</h3>
+			</div>
 		</div>
 	</div>
 </section>

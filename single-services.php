@@ -50,22 +50,22 @@ $container   = 'container-fluid';
 			 ?>
 
 				<header class="entry-header service-entry-header">
-					<img src="<?php echo $header ?>">
+					<?php echo wp_get_attachment_image($header, "full"); ?>
 					<?php the_title( '<h1 class="service-entry-title text-center">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
-				<section class="service-content">
+				<section class="service-content container">
 					<?php the_content(); ?>
 				</section>
 
-				<section class="bottom-images">
+				<section class="bottom-images container-fluid">
 
 					<?php // 1 image layout
 						if( $img_count == 1) { 
 					?>
 						<div class="row">
 							<div class="col-12 d-flex justify-content-center align-items-center">
-								<img src="<?php echo $image_1 ?>">
+								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
 						</div>
 
@@ -74,10 +74,10 @@ $container   = 'container-fluid';
 					?>
 					<div class="row">
 						<div class="col-md-6">
-							<img src="<?php echo $image_1 ?>">
+							<?php echo wp_get_attachment_image($image_1, "full") ?>
 						</div>
 						<div class="col-md-6">
-							<img src="<?php echo $image_2 ?>">
+							<?php echo wp_get_attachment_image($image_2, "full") ?>
 						</div>
 					</div>
 					
@@ -86,13 +86,13 @@ $container   = 'container-fluid';
 					?>
 					<div class="row">
 						<div class="col-md-4">
-							<img src="<?php echo $image_1 ?>">
+							<?php echo wp_get_attachment_image($image_1, "full") ?>
 						</div>
 						<div class="col-md-4">
-							<img src="<?php echo $image_2 ?>">
+							<?php echo wp_get_attachment_image($image_2, "full") ?>
 						</div>
 						<div class="col-md-4">
-							<img src="<?php echo $image_3 ?>">
+							<?php echo wp_get_attachment_image($image_3, "full") ?>
 						</div>
 					</div>	
 
@@ -101,19 +101,19 @@ $container   = 'container-fluid';
 					?>
 						<div class="row">
 							<div class="col-md-6">
-								<img src="<?php echo $image_1 ?>">
+								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
 							<div class="col-md-6">
-								<img src="<?php echo $image_2 ?>">
+								<?php echo wp_get_attachment_image($image_2, "full") ?>
 							</div>
 						</div> <!-- end row 1 -->
 
 						<div class="row">
 							<div class="col-md-6">
-								<img src="<?php echo $image_3 ?>">
+								<?php echo wp_get_attachment_image($image_3, "full") ?>
 							</div>
 							<div class="col-md-6">
-								<img src="<?php echo $image_4 ?>">
+								<?php echo wp_get_attachment_image($image_4, "full") ?>
 							</div>
 						</div> <!-- end row 2 -->
 
@@ -122,22 +122,22 @@ $container   = 'container-fluid';
 					?>
 						<div class="row">
 							<div class="col-md-6">
-								<img src="<?php echo $image_1 ?>">
+								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
 							<div class="col-md-6">
-								<img src="<?php echo $image_2 ?>">
+								<?php echo wp_get_attachment_image($image_2, "full") ?>
 							</div>
 						</div> <!-- end row 1 -->
 
 						<div class="row">
 							<div class="col-md-4">
-								<img src="<?php echo $image_3 ?>">
+								<?php echo wp_get_attachment_image($image_3, "full") ?>
 							</div>
 							<div class="col-md-4">
-								<img src="<?php echo $image_4 ?>">
+								<?php echo wp_get_attachment_image($image_4, "full") ?>
 							</div>
 							<div class="col-md-4">
-								<img src="<?php echo $image_5 ?>">
+								<?php echo wp_get_attachment_image($image_5, "full") ?>
 							</div>
 						</div> <!-- end row 2 -->
 

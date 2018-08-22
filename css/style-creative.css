@@ -167,9 +167,13 @@ h1.slogan {
 #fp-services-grid {
 	color: #FFEEC6;
 	background-color: #845E9A;
+	max-width: 1250px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .fp-service-item {
 	padding: 20px;
+	overflow: hidden;
 }
 /* Default sizing */
 .fp-service-item,
@@ -185,16 +189,46 @@ h1.slogan {
 	background-color: #86AC41; /*green*/
 }
 /* fp service content */
-.fp-services-inner-wrapper {
+.fp-service-item .service-image {
+	height: 100%;
+	width: auto;
+}
+.service-image img {
+	height: 100%;
+	width: auto;
+}
+.service-image:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom:0;
+	left: 0;
+	background-color: rgba(132, 94, 154,.3);
+
+}
+#new-construction .service-image:after,
+#green .service-image:after {
+	background-color: rgba(125, 163, 161,.3);
+}
+#restoration .service-image:after,
+#purchase-consult .service-image:after {
+	background-color: rgba(134, 172, 65, .3);
+}
+
+/*.fp-services-inner-wrapper {
 	height: 100%;
 	background-color: rgba(255, 255, 255, .4);
 	position: relative;
 	text-align: center;
-}
+}*/
 .fp-service-item .service-header {
 	top: 50%;
-	transform: translateY(-50%);
-	position: relative;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	text-align: center;
 }
 
 /* Frontpage Testimonials */
@@ -233,14 +267,29 @@ h1.slogan {
     top: -50%;
     right: -50%;
     bottom: -65%;
-    left: 16%;
-    background: rgba(0,0,0,.22);
+    left: 63px;
+    background: rgba(255, 238, 198,.4);
+    background: rgba(255, 249, 198, 0.4); /*less red*/
     transform: rotate(23deg);
     transition: left .3s ease-in-out;
 }
+h3.image-title {
+	color: #3C2E3D;
+	position: absolute;
+	top: 40%;
+	transform: rotate(-67deg);
+	width: 200px;
+	left: -20px;
+	font-size:2.1rem;
+	transition: left .3s ease-in-out;	
+}
 .fp-gallery-item:hover .gallery-inner::before {
-	left:89%;
+	left:290px;
 	transition: left .3s ease-in-out;
+}
+.fp-gallery-item:hover h3.image-title {
+	left: 223px;
+	transition: left .3s ease-in-out;	
 }
 
 /* Portfolio Gallery Page */
@@ -266,17 +315,15 @@ h1.slogan {
 }
 
 /* Single Service Template */
-.service-content {
-	margin: 8%;
-}
 .service-entry-header {
 	position: relative;
+	margin-bottom: 5rem;
 }
 .service-entry-title{
 	position: absolute;
-	top: 15%;
-	left: 50%;	
-	transform: translate(-50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	width: auto;
 	background: linear-gradient(
 		to right, 
@@ -364,11 +411,11 @@ h1.slogan {
 	/* Frontpage Services */
 	.fp-service-item--width2 { 
 		width: 66.66667%; 
-		height: 200px;
+		height: 240px;
 	}
 	.fp-service-item--height2 {
 		width: 33.33333%;
-		height: 400px;
+		height: 440px;
 	}
 	.fp-service-item--width1 {
 		width: 33.33333%;
@@ -419,22 +466,20 @@ h1.slogan {
 	.fp-testimonial {
 		max-width: 50%;
 	}
-	.service-entry-title {
-		min-width: 600px;
-		font-size: 120px;
-		padding-left: 35px;
-		padding-right: 35px;
-	}
-	/* Large Single Service Template */
-	.service-content {
-		margin: 4% auto;
-		width: 70%;
-	}
-
-
 	/* Portfolio Gallery Page */
 	#cb-gallery-grid {
 		height: 80vh;
+	}
+	/* Large Single Service Template */
+	.service-entry-header {
+		height: 50vh;
+		overflow:hidden;
+	}
+	.service-entry-title {
+		font-size: 91px;
+		padding-left: 35px;
+		padding-right: 35px;
+		width: 70%;
 	}
 	/* fluid 5 columns */
 	.cb-gallery-spacer,
