@@ -173,14 +173,16 @@ h1.slogan {
 /* Frontpage Services */
 #fp-services-grid {
 	color: #FFEEC6;
-	background-color: #845E9A;
 	max-width: 1250px;
 	margin-right: auto;
 	margin-left: auto;
 }
 .fp-service-item {
-	padding: 20px;
+	padding: 10px;
 	overflow: hidden;
+}
+.fp-service-item img {
+	transition: all .3s ease-in-out;
 }
 /* Default sizing */
 .fp-service-item,
@@ -189,16 +191,11 @@ h1.slogan {
 	width: 100%;
 	height: 175px;
 }
-.fp-service-item--height2 {
-	background-color: #7DA3A1; /*blue*/
-}
-.fp-service-item--width2 {
-	background-color: #86AC41; /*green*/
-}
 /* fp service content */
 .fp-service-item .service-image {
 	height: 100%;
 	width: auto;
+	overflow: hidden;
 }
 .service-image img {
 	height: 100%;
@@ -207,12 +204,11 @@ h1.slogan {
 .service-image:after {
 	content: '';
 	position: absolute;
-	top: 0;
-	right: 0;
-	bottom:0;
-	left: 0;
+	top: 20px;
+	right: 20px;
+	bottom:20px;
+	left: 20px;
 	background-color: rgba(132, 94, 154,.3);
-
 }
 #new-construction .service-image:after,
 #green .service-image:after {
@@ -221,6 +217,11 @@ h1.slogan {
 #restoration .service-image:after,
 #purchase-consult .service-image:after {
 	background-color: rgba(134, 172, 65, .3);
+}
+/*hover action*/
+.fp-service-item:hover img {
+	transform: scale(1.2);
+	transition: all .3s ease-in-out; 
 }
 
 /*.fp-services-inner-wrapper {
