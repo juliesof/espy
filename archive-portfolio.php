@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div id="cb-gallery-buttons" class="button-group filter-button-group">
+<div id="cb-gallery-buttons" class="button-group filter-button-group d-none">
 	<button data-filter=".interior-gallery">Interior</button>
 	<button data-filter=".exterior-gallery">Exterior</button>
 	<button data-filter=".kitchen-gallery">Kitchen</button>

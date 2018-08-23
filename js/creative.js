@@ -13,6 +13,9 @@ jQuery( document ).ready(function( $ ){
 	// 	}
 	// }); // end frontpage SERVICES function
 
+	// Front Page animated scroll-down arrow
+
+
 	// Front Page Services Grid
 	var $servicesGrid = $('#fp-services-grid');
 	$servicesGrid.isotope({
@@ -42,8 +45,9 @@ jQuery( document ).ready(function( $ ){
 		$galGrid.isotope({ filter: filterValue });
 	});
 	$galMenu.click(function(){
-		var firstFilter = $(this).attr('data-filter');
-		$galGrid.isotope({ filter: firstFilter });
+		var firstClick = $(this).attr('data-filter');
+		$galGrid.isotope({ filter: firstClick });
+		$textMenu.removeClass('d-none')
 	});
 
 	//toggle floating telephone icon number
