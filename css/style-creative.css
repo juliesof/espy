@@ -554,6 +554,7 @@ h3.image-title {
 	}
 	.block-element {
 		height: 200px;
+		overflow: hidden;
 	}
 } /*end min-width: 768px*/
 

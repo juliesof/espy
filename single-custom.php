@@ -8,49 +8,39 @@
 
 get_header();
 
-$container   = 'container-fluid';
-
 ?>
 
-<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+<div class="container-fluid" id="content" tabindex="-1">
 
-<!-- 	<div class="row">-->
+	<?php 
 
-		<main class="site-main" id="main"> 
+		while ( have_posts() ) : the_post();
+	?>
 
-			<?php 
+		<header class="entry-header text-center">
+			<?php the_title( '<h1>', '</h1>' ); ?>
+		</header><!-- .entry-header -->
 
-				while ( have_posts() ) : the_post();
-		  ?>
+		<?php 
+			if( have_rows('template_row') ): 
+				while( have_rows('template_row') ) : the_row();
 
-				<header class="entry-header text-center">
-					<?php the_title( '<h1>', '</h1>' ); ?>
-				</header><!-- .entry-header -->
+				$text = get_sub_field('text_block');
+				$image = get_sub_field('image');
+		?>
+			<section class="row block-row">
+				<div class="col-lg-6 block-element">
+					<?php echo wp_get_attachment_image($image, 'full') ?>
+				</div>
+				<div class="col-lg-6 block-element">
+					<?php echo $text ?>
+				</div>
+			</section>
 
-				<?php 
-					if( have_rows('template_row') ): 
-						while( have_rows('template_row') ) : the_row();
+		<?php endwhile; endif; ?>
 
-						$text = get_sub_field('text_block');
-						$image = get_sub_field('image');
-				?>
-					<section class="row block-row">
-						<div class="col-lg-6 block-element">
-							<?php echo wp_get_attachment_image($image, full) ?>
-						</div>
-						<div class="col-lg-6 block-element">
-							<?php echo $text ?>
-						</div>
-					</section>
 
-				<?php endwhile; endif; ?>
-		
-
-			<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-
-<!-- </div> --><!-- .row -->
+	<?php endwhile; // end of the loop. ?>
 
 </div><!-- Container end -->
 
