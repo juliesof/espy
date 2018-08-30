@@ -550,16 +550,10 @@ h3.image-title {
 		display: flex;
 	}
 	.block-row:nth-child(odd) {
-		flex-direction: column-reverse;
+		flex-direction: row-reverse;
 	}
 	.block-element {
 		height: 200px;
-	}
-	.block-1 {
-		background-color: #F87089;
-	}
-	.block-2 {
-		background-color: #9A6FF7;
 	}
 } /*end min-width: 768px*/
 
