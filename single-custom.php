@@ -35,42 +35,12 @@ $container   = 'container-fluid';
 						$image = get_sub_field('image');
 				?>
 					<section class="row block-row">
-						<div class="col-lg-6 block-element ">
-							
+						<div class="col-lg-6 block-element">
+							<?php echo wp_get_attachment_image($image, full) ?>
 						</div>
 						<div class="col-lg-6 block-element">
-							
+							<?php echo $text ?>
 						</div>
-					</section>
-
-					<section class="row block-row">
-							<div class="col-lg-6 block-element ">
-								
-							</div>
-							<div class="col-lg-6 block-element">
-								
-							</div>
-						
-					</section>
-
-					<section class="row block-row">
-							<div class="col-lg-6 block-element ">
-								
-							</div>
-							<div class="col-lg-6 block-element">
-								
-							</div>
-				
-					</section>
-
-					<section class="row block-row">
-							<div class="col-lg-6 block-element ">
-								
-							</div>
-							<div class="col-lg-6 block-element">
-								
-							</div>
-		
 					</section>
 
 				<?php endwhile; endif; ?>
