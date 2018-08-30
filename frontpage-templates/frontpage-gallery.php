@@ -9,7 +9,7 @@
 		</div>
 		<div class="fp-gallery-item">
 			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/ext-2.jpg">
+				<img src="/espy/wp-content/uploads/2018/08/menu-exterior-1.jpg">
 				<h3 class="image-title">Exteriors</h3>
 			</div>
 		</div>
