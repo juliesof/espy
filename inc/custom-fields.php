@@ -18,6 +18,20 @@ function create_custom_post_types(){
 		)
 	);
 
+// Create post type for block template
+	register_post_type('custom',
+		array(
+		'labels' => array(
+			'name' => __('Custom Template'),
+			'singular_name' => __('Custom Template'),
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_nav_menus' => true,
+		'rewrite' => false,
+		)
+	);
+
 // Create services post type
 	register_post_type('services',
 		array(

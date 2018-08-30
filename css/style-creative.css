@@ -19,6 +19,7 @@
 	Medium Devices
 * Medium Frontpage Testimonials
 * Medium Frontpage Galleries
+* Medium Block Template
 
 	Large Devices
 * Large Frontpage Welcome
@@ -544,7 +545,23 @@ h3.image-title {
 		height: 320px;
 		padding: 20px;
 	}
-}
+	/* Medium Block Template*/
+	.block-container {
+		display: flex;
+	}
+	.block-row:nth-child(odd) {
+		flex-direction: column-reverse;
+	}
+	.block-element {
+		height: 200px;
+	}
+	.block-1 {
+		background-color: #F87089;
+	}
+	.block-2 {
+		background-color: #9A6FF7;
+	}
+} /*end min-width: 768px*/
 
 /* Large Devices */
 @media(min-width: 992px) {
