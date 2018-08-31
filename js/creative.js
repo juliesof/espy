@@ -50,17 +50,23 @@ jQuery( document ).ready(function( $ ){
 		$textMenu.removeClass('d-none')
 	});
 
+
 	//toggle floating telephone icon number
-	var $tellyToggle = $('#tellyToggle');
-	$tellyToggle.on('hover', function(){
-		$tellyToggle.toggleClass('telephone-icon-small telephone-icon-expanded'
-			)
-		// 	if($tellyToggle.hasClass('telephone-icon-small')){
-		// 	$tellyToggle.switchClass('telephone-icon-small', 'telephone-icon-expanded', 800);
-		// }else{
-		// 	$tellyToggle.switchClass('telephone-icon-expanded', 'telephone-icon-small', 800);
-		// }
-	}); // end TELEPHONE-icon function
+	var $tellyToggle 			= $('.telephone-content');
+	var $tellyToggleIcon 	= $('.telephone-icon'); 
+
+	$(window).one('scroll', function(){
+		$tellyToggle.toggleClass('telephone-small');
+		$tellyToggleIcon.toggleClass('icon-small');
+	});
+
+	$('.telly-toggle').on('click', function(){
+		$tellyToggle.toggleClass('telephone-small');	
+		$tellyToggleIcon.toggleClass('icon-small');	
+	}); 
+
+	// end TELEPHONE-icon functionality
+
 
 // smooth scrolling for internal page links.  Many thanks to Chris Coyier of css tricks
 		// Select all links with hashes
