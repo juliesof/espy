@@ -25,7 +25,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php get_template_part( 'frontpage-templates/frontpage', 'gallery' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
-			<div id ="tellyToggle" class="telephone-icon-small"></div>
+			<div id ="tellyToggle"></div>
 		</main><!-- #main -->
 			
 </div><!-- Container end -->

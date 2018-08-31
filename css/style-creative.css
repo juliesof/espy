@@ -179,15 +179,15 @@ h1.navbar-brand {
 	background-color: #FFEEC6;
 	z-index: 45;
 	cursor: pointer;
-}
-.telephone-icon-expanded {
 	height: 60px;
 	width: 270px;
 	border-radius: 35px;
+	transition: transform 0.3s ease-out;
+	transform: scaleX(1);
+	transform-origin: left;
 }
-.telephone-icon-small {
-	height: 60px;
-	width: 60px;
+#tellyToggle.telephone-icon-small {
+	transform: scaleX(.22);
 	border-radius: 50%;
 }
 /* Arrow Down Button */
