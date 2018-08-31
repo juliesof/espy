@@ -41,7 +41,19 @@ get_header();
 
 
 	<?php endwhile; // end of the loop. ?>
-
+	
+<div class="telly-toggle">
+				<div class="telephone-icon">
+					Icon
+				</div>
+				<div class ="telephone-content">
+					<span class="telephone-content-wrapper">
+						<div class="telephone-toggle-content">
+							413.555.5555
+						</div>
+					</span>
+				</div>
+			</div>
 </div><!-- Container end -->
 
 <?php get_footer(); ?>

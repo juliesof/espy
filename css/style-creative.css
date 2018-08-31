@@ -172,7 +172,7 @@ h1.navbar-brand {
 }
 
 /* Constant Telephone Icon */
-#tellyToggle {
+.telephone-content {
 	position: fixed;
 	bottom: 2rem;
 	left: 2rem;
@@ -180,15 +180,37 @@ h1.navbar-brand {
 	z-index: 45;
 	cursor: pointer;
 	height: 60px;
-	width: 270px;
+	width: 225px;
 	border-radius: 35px;
 	transition: transform 0.3s ease-out;
 	transform: scaleX(1);
 	transform-origin: left;
+	z-index: 10;
 }
-#tellyToggle.telephone-icon-small {
-	transform: scaleX(.22);
+.telephone-icon {
+	position: fixed;
+	bottom: 3rem;
+	left: 3.5rem;
+	z-index: 15;
+	cursor: pointer;
+}
+.telephone-content.telephone-small {
+	transform: scaleX(.27);
 	border-radius: 50%;
+}
+.telephone-icon.icon-small {
+	left: 2.75rem;
+}
+.telephone-content-wrapper {
+	position: relative;
+}
+.telephone-toggle-content {
+	position: absolute;
+	left: 80px;
+	top: 9px;
+}
+.telephone-content.telephone-small .telephone-toggle-content {
+	display: none;
 }
 /* Arrow Down Button */
 .bounce {
