@@ -64,7 +64,7 @@ $container   = 'container-fluid';
 						if( $img_count == 1) { 
 					?>
 						<div class="row">
-							<div class="col-12 d-flex justify-content-center align-items-center">
+							<div class="single-service-block col-12 d-flex justify-content-center align-items-center">
 								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
 						</div>
@@ -73,10 +73,10 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 2 ) { 
 					?>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="single-service-block col-md-6">
 							<?php echo wp_get_attachment_image($image_1, "full") ?>
 						</div>
-						<div class="col-md-6">
+						<div class="single-service-block col-md-6">
 							<?php echo wp_get_attachment_image($image_2, "full") ?>
 						</div>
 					</div>
@@ -85,13 +85,13 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 3 ) { 
 					?>
 					<div class="row">
-						<div class="col-md-4">
+						<div class="single-service-block col-md-4">
 							<?php echo wp_get_attachment_image($image_1, "full") ?>
 						</div>
-						<div class="col-md-4">
+						<div class="single-service-block col-md-4">
 							<?php echo wp_get_attachment_image($image_2, "full") ?>
 						</div>
-						<div class="col-md-4">
+						<div class="single-service-block col-md-4">
 							<?php echo wp_get_attachment_image($image_3, "full") ?>
 						</div>
 					</div>	
@@ -100,19 +100,19 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 4 ) { 
 					?>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_2, "full") ?>
 							</div>
 						</div> <!-- end row 1 -->
 
 						<div class="row">
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_3, "full") ?>
 							</div>
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_4, "full") ?>
 							</div>
 						</div> <!-- end row 2 -->
@@ -121,22 +121,22 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 5 ) { 
 					?>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_1, "full") ?>
 							</div>
-							<div class="col-md-6">
+							<div class="single-service-block col-md-6">
 								<?php echo wp_get_attachment_image($image_2, "full") ?>
 							</div>
 						</div> <!-- end row 1 -->
 
 						<div class="row">
-							<div class="col-md-4">
+							<div class="single-service-block col-md-4">
 								<?php echo wp_get_attachment_image($image_3, "full") ?>
 							</div>
-							<div class="col-md-4">
+							<div class="single-service-block col-md-4">
 								<?php echo wp_get_attachment_image($image_4, "full") ?>
 							</div>
-							<div class="col-md-4">
+							<div class="single-service-block col-md-4">
 								<?php echo wp_get_attachment_image($image_5, "full") ?>
 							</div>
 						</div> <!-- end row 2 -->
