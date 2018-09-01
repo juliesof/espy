@@ -11,6 +11,7 @@
 * Frontpage Galleries
 * Portfolio Gallery Page
 * Single Service Template
+* Single Block Template
 * Footer
 
 	Extra Small Devices
@@ -444,6 +445,28 @@ h3.image-title {
 	font-size: 70px;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+.bottom-images .row {
+	padding-bottom: 2rem;
+}
+.single-service-block {
+	height: calc(9 / 16 * 100vw);
+	overflow: hidden;
+}
+.single-service-block.col-md-6 {
+	height: calc(9 / 16 * 100vw / 2);
+}
+.single-service-block.col-md-4 {
+	height: calc(9 / 16 * 100vw / 3);
+}
+.single-service-block img {
+	width: 100%;
+}
+
+/* Single Block Template */
+.block-element img {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Footer */
