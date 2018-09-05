@@ -3,8 +3,8 @@
 		<h1 
 			class="slogan" 
 			data-aos="fade-in" 
-			data-aos-delay="200"
-			data-aos-duration="3000">
+			data-aos-delay="150"
+			data-aos-duration="2000">
 				Every House Has a Story to Tell
 		</h1>
 	</div>
