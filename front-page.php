@@ -35,9 +35,12 @@ get_header();
 					</span>
 				</div>
 			</div>
-
+			<!-- <script>
+				AOS.init();
+			</script> -->
 		</main><!-- #main -->
 			
 </div><!-- Container end -->
+
 
 <?php get_footer(); ?>

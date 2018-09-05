@@ -21,9 +21,23 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_style( 'creative-styles',
 			get_stylesheet_directory_uri() . '/css/style-creative.css', array(), 1 );
 
+		// enqueue animation library AOS
+
+		// register js file with the AOS init function
+		wp_register_script('aosInit', get_template_directory_uri() . '/js/aosInit.js', array(), null, 1);
+
+		// enqueue the AOS css stylesheet
+		wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
+
+		// enqueue the AOS javascript file
+		wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', array( 'aosInit' ), null, true);
+
 		wp_enqueue_script( 'jquery');
+
 		wp_enqueue_script( 'creative-js', get_template_directory_uri() . '/js/creative.js', array('jquery'), 1 );
+
 		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '3.0.6' );
+		
 		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), $theme_version, true);
 		
 		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/js/theme.min.js');
