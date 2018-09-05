@@ -38,9 +38,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					</span>
 				</div>
 			</div>
-
+			<!-- <script>
+				AOS.init();
+			</script> -->
 		</main><!-- #main -->
 			
 </div><!-- Container end -->
+
 
 <?php get_footer(); ?>
