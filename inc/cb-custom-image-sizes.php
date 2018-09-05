@@ -7,26 +7,28 @@
 
 add_action( 'after_setup_theme', 'aw_custom_add_image_sizes' );
 function aw_custom_add_image_sizes() {
-	add_image_size( 'xxsmall', 300, 9999 ); // 300px wide unlimited height
-	add_image_size( 'xsmall', 450, 9999 ); // 450px wide unlimited height
-	add_image_size( 'small', 576, 9999 ); // 576px wide unlimited height
-	add_image_size( 'medium', 768, 9999 ); // 768px wide unlimited height
-	add_image_size( 'large', 992, 9999 ); // 992px wide unlimited height
-	add_image_size( 'xlarge', 1200, 9999 ); // 1200px wide unlimited height
-	add_image_size( 'xxlarge', 2000, 9999 ); // 2000px wide unlimited height
-	add_image_size( 'portfolio_full', 9999, 900 ); // 900px tall unlimited width
+    add_image_size( 'xsmall', 320, 9999 ); // 320px wide unlimited height
+    add_image_size( 'small', 450, 9999 ); // 450px wide unlimited height
+    add_image_size( 'med-small', 575, 9999 ); // 575px wide unlimited height
+    add_image_size( 'medium', 767, 9999 ); // 767px wide unlimited height
+    add_image_size( 'med-large', 991, 9999 ); // 991px wide unlimited height
+    add_image_size( 'large', 1024, 9999 ); // 1024px wide unlimited height
+    add_image_size( 'xlarge', 1200, 9999 ); // 1200px wide unlimited height
+    add_image_size( 'xxlarge', 2000, 9999 ); // 2000px wide unlimited height
+    add_image_size( 'portfolio_full', 9999, 900 ); // 900px tall unlimited width
 }
 
 add_filter( 'image_size_names_choose', 'aw_custom_add_image_size_names' );
 function aw_custom_add_image_size_names( $sizes ) {
-	return array_merge( $sizes, array(
-		'xxsmall' => __( '2X Extra Small' ),
-		'xsmall' => __( 'Extra Small' ),
-		'small' => __( 'Small' ),
-		'medium' => __( 'Medium' ),
-		'large' => __( 'Large' ),
-		'xlarge' => __( 'Extra Large' ),
-		'xxlarge' => __( '2X Extra Large' ),
-		'portfolio_full' => __( 'Portfolio Full Size' ),
-	) );
-}	
+    return array_merge( $sizes, array(
+        'xsmall' => __( 'Extra Small 320w' ),
+        'small' => __( 'Small 450w' ),
+        'med-small' => __( 'Medium Small 575w' ),
+        'medium' => __( 'Medium 767w' ),
+        'med-large' => __( 'Medium large 991w' ),
+        'large' => __( 'Large 1024w' ),
+        'xlarge' => __( 'Extra Large 1200w' ),
+        'xxlarge' => __( '2X Extra Large 2000w' ),
+        'portfolio_full' => __( 'Portfolio Full Size' ),
+    ) );
+}   

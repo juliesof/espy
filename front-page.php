@@ -7,9 +7,6 @@
  */
 
 get_header();
-
-$container   = get_theme_mod( 'understrap_container_type' );
-
 ?>
 
 	<div class="container-fluid" id="content-frontpage" tabindex="-1">
