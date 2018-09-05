@@ -1,5 +1,5 @@
 <section id="fp-gallery" class="mt-5">
-	<h1 class="text-center mb-5">Explore Our Work</h1>
+	<h1 class="text-center mb-lg-4 mb-xs-2">Explore Our Work</h1>
 	<div id="fp-gallery-grid">
 		<div class="fp-gallery-item">
 			<div class="gallery-inner">
