@@ -227,7 +227,11 @@ h1.slogan {
 	cursor: pointer;
 }
 .fp-service-item img {
+	width: 100%;
+	height: auto;
 	transition: all .3s ease-in-out;
+	position: relative;
+	top: 0;
 }
 /* Default sizing */
 .fp-service-item,
@@ -239,12 +243,8 @@ h1.slogan {
 /* fp service content */
 .fp-service-item .service-image {
 	height: 100%;
-	width: auto;
+	width: 100%;
 	overflow: hidden;
-}
-.service-image img {
-	height: 100%;
-	width: auto;
 }
 .service-image:after {
 	content: '';
@@ -256,28 +256,13 @@ h1.slogan {
 	background-color: rgba(60, 46, 61, 0.5);
 }
 .fp-service-item .service-header {
-	font-size: 38px;
+	font-size: 31px;
 }
-/*#new-construction .service-image:after,
-#green .service-image:after {
-	background-color: rgba(125, 163, 161,.3);
-}
-#restoration .service-image:after,
-#purchase-consult .service-image:after {
-	background-color: rgba(134, 172, 65, .3);
-}*/
 /*hover action*/
 .fp-service-item:hover img {
 	transform: scale(1.1);
 	transition: all .5s ease-in-out; 
 }
-
-/*.fp-services-inner-wrapper {
-	height: 100%;
-	background-color: rgba(255, 255, 255, .4);
-	position: relative;
-	text-align: center;
-}*/
 .fp-service-item .service-header {
 	top: 50%;
 	left: 50%;
@@ -287,7 +272,7 @@ h1.slogan {
 	text-align: center;
 }
 
-/* Frontpage Testimonials */
+/*----- Frontpage Testimonials */
 #frontpage-testimonials {
 	padding: 3% 0 2%;
 }
@@ -505,6 +490,10 @@ h3.image-title {
 	top: 50%;
 	left: 50%;
 }*/
+	/* Frontpage Services */
+	.fp-service-item .service-header {
+		font-size: 35px;
+	}
 	/* Frontpage Gallery */
 	.fp-gallery-item {
 		width: 50%;
@@ -528,7 +517,11 @@ h3.image-title {
 		line-height: 0.75;
 		font-family: "Tangerine", cursive;
 	}
-	/* Frontpage Services */
+	/*----- Frontpage Services */
+	/*approximate vertical centering*/
+	.fp-service-item img {
+		top: -20%;
+	}
 	.fp-service-item--width2 { 
 		width: 66.66667%; 
 		height: 240px;
@@ -537,22 +530,31 @@ h3.image-title {
 		width: 33.33333%;
 		height: 440px;
 	}
+	/*constrain tall images to top and bottom and remove top-offset*/
+	.fp-service-item--height2 img {
+		height: 100%;
+		width: auto;
+		top: 0;
+	}
 	.fp-service-item--width1 {
 		width: 33.33333%;
 		height: 200px;
 	}
-	/* Frontpage Testimonials */
+	.fp-service-item .service-header {
+		font-size: 38px;
+	}
+	/*----- Frontpage Testimonials */
 	.fp-testimonial .quote-text {
 		padding-top: 3rem;
 	}
-	/* Frontpage Gallery */
+	/*----- Frontpage Gallery */
 	.gallery-sizer,
 	.fp-gallery-item {
 		width: 33.33333%;
 		height: 320px;
 		padding: 20px;
 	}
-	/* Medium Block Template*/
+	/*----- Medium Block Template*/
 	.block-container {
 		display: flex;
 	}

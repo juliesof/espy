@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the individual service pages.
- *
+ * Template Name: Homepage Services
  *
  * @package understrap
  */
