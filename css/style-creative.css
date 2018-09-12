@@ -103,7 +103,7 @@ h1.navbar-brand {
 	line-height: 1.2;
 }
 .header-color {
-	background-color: #849D7A;
+	background-color: #849D7A; /*sage green*/
 }
 .header-content {
 	position: absolute;
@@ -438,6 +438,7 @@ h3.image-title {
 	padding-top: 17px;
 	padding-bottom: 15px;
 	background-color: #3C2E3D;
+	max-height: 360px;
 }
 #cta-bar h1,
 #cta-bar .slogan {
