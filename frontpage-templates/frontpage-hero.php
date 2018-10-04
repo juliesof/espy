@@ -5,7 +5,7 @@
 			data-aos="fade-in" 
 			data-aos-delay="150"
 			data-aos-duration="2000">
-				Every House Has a Story to Tell
+				Every House Has a<br/>Story to Tell
 		</h1>
 	</div>
 	<a href="#frontpage-welcome" class="bounce">
