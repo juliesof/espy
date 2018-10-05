@@ -35,7 +35,7 @@
 			</div>
 		</div>
 
-		<div class="fp-gallery-item">
+		<div class="fp-gallery-item fp-gallery-item-last">
 			<div class="gallery-inner">
 				<img src="/espy/wp-content/uploads/2018/08/menu-bef-aft.jpg">
 				<h3 class="image-title">Before &amp; After</h3>
