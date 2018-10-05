@@ -104,6 +104,7 @@ h1.navbar-brand {
 }
 .header-color {
 	background-color: #849D7A;
+	background-color: #85915c;/*KJC green half shade*/
 }
 .header-content {
 	position: absolute;
@@ -125,6 +126,13 @@ h1.navbar-brand {
 		rgba(50, 50, 50, .4) 87%,
 		rgba(255, 230, 255, 0) 100%
 		);
+	/*background: linear-gradient( 
+		to right, transparent, 
+		rgb(239, 228, 206), 
+		rgba(239, 228, 206, .4) 14%, 
+		rgba(239, 228, 206, .7) 50%, 
+		rgba(239, 228, 206, .4) 87%, 
+		transparent 100% );*/
 	color: white;
 	line-height: 1.5;
 	margin-bottom: 15px;
@@ -140,6 +148,8 @@ h1.navbar-brand {
 	bottom: 1rem;
 	left: 1rem;
 	background-color: #FFEEC6;
+	background-color: #ffe9bb;/*more orangy vanilla - KTC*/
+	color: #32332e;/*greenish grey - KJC green*/
 	z-index: 45;
 	cursor: pointer;
 	height: 60px;
@@ -171,6 +181,7 @@ h1.navbar-brand {
 	position: absolute;
 	left: 80px;
 	top: 9px;
+
 }
 .telephone-content.telephone-small .telephone-toggle-content {
 	display: none;
@@ -202,6 +213,7 @@ h1.slogan {
 #frontpage-welcome-text{
 	max-width: 90%;
 	background-color: #849D7A;
+	background-color: #85915c;/*current site green half shade*/
 	color: #FFEEC6;
 	font-size: 19px;
 	border-radius: 10px;
@@ -470,6 +482,7 @@ h3.image-title {
 	}
 	.scroll-icon {
 		background-color: #FFEEC6;
+		background-color: #ffe9bb;/*a more orangy vanilla - KJC*/
 		height: 60px;
 		width: 60px;
 		border-radius: 50%;
@@ -480,6 +493,7 @@ h3.image-title {
 		vertical-align: middle;
 		text-align: center;
 		color: #333;
+		color: #32332e;/*greenish grey - KJC green*/
 	}
 /*.scroll-icon .action-arrow {
 	border: solid 2px white;

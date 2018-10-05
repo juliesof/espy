@@ -4,8 +4,8 @@
 		<!-- Testimonial 1 -->
 		<div 
 			class="fp-testimonial text-center"
-			data-aos="flip-up" 
-			data-aos-delay="100"
+			data-aos="fade-in" 
+			data-aos-delay="300"
 			data-aos-duration="1200"
 		>
 			<?php
@@ -21,8 +21,8 @@
 		<!-- Testimonial 2 -->
 		<div 
 			class="fp-testimonial text-center"
-			data-aos="flip-up" 
-			data-aos-delay="800"
+			data-aos="fade-in" 
+			data-aos-delay="600"
 			data-aos-duration="1200"
 		>
 			<?php echo wp_get_attachment_image( $testimonialImg, "full" ); ?>
