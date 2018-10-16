@@ -23,22 +23,25 @@ jQuery( document ).ready(function( $ ){
 	}); // end frontpage SERVICES function
 
 	//Front Page Gallery Section
-	var $fp_gallery = $('#fp-gallery-grid');
-	$fp_gallery.isotope({
-		itemSelector: '.fp-gallery-item'
+	var $fp_gallery = $('#fp-gallery-grid').imagesLoaded( function(){
+		$fp_gallery.isotope({
+			itemSelector: '.fp-gallery-item'
+		});
 	}); // end frontpage GALLERIES function
 
 	//Portfolio Gallery Page
 	var $textMenu 	= $( '#cb-gallery-buttons' );
 		$galMenu	= $( '.photo-menu' )
-		$galGrid 	= $( '#cb-gallery-grid' ).isotope({
-			itemSelector: '.cb-gallery-item',
-			percentPosition: true,
-			filter: '.photo-menu',
-			stagger: 30,
-			masonry: {
-				columnWidth: '.cb-gallery-spacer'
-			}
+		$galGrid 	= $( '#cb-gallery-grid' ).imagesLoaded( function(){
+			$galGrid.isotope({
+				itemSelector: '.cb-gallery-item',
+				percentPosition: true,
+				filter: '.photo-menu',
+				stagger: 30,
+				masonry: {
+					columnWidth: '.cb-gallery-spacer'
+				}
+			});
 		});
 	$textMenu.on('click','button',function(){
 		var filterValue = $(this).attr('data-filter');
@@ -52,7 +55,7 @@ jQuery( document ).ready(function( $ ){
 
 
 	//toggle floating telephone icon number
-	var $tellyToggle 			= $('.telephone-content');
+	var $tellyToggle 		= $('.telephone-content');
 	var $tellyToggleIcon 	= $('.telephone-icon'); 
 
 	$(window).one('scroll', function(){

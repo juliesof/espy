@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
-					<div>Copyright &copy;Kris Thomson Carpentry | Site by <a href="https://creativeblazer.com" target="_blank">Creative Blazer</a></div>
+					<div>Copyright &copy; Kris Thomson Carpentry <span class="d-none d-sm-inline">|</span><br class="d-sm-none"/> Site by <a href="https://creativeblazer.com" target="_blank">Creative Blazer</a></div>
 
 					</div><!-- .site-info -->
 

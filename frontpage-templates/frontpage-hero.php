@@ -10,7 +10,7 @@
 	</div>
 	<a href="#frontpage-welcome" class="bounce">
 		<div class="scroll-icon">
-			<i class="fa fa-2x fa-angle-down"></i>
+			<?php echo wp_get_attachment_image(179, "full"); ?>
 		</div>
 	</a>
 </div>

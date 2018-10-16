@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * The template for displaying the individual service pages.
  * Template Name: Homepage Services
@@ -130,13 +130,13 @@ $container   = 'container-fluid';
 						</div> <!-- end row 1 -->
 
 						<div class="row">
-							<div class="single-service-block col-md-4">
+							<div class="single-service-block col-md-4 pb-2 pb-md-0">
 								<?php echo wp_get_attachment_image($image_3, "full") ?>
 							</div>
-							<div class="single-service-block col-md-4">
+							<div class="single-service-block col-md-4 d-none d-md-block">
 								<?php echo wp_get_attachment_image($image_4, "full") ?>
 							</div>
-							<div class="single-service-block col-md-4">
+							<div class="single-service-block col-md-4 d-none d-md-block">
 								<?php echo wp_get_attachment_image($image_5, "full") ?>
 							</div>
 						</div> <!-- end row 2 -->

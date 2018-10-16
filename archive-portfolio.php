@@ -28,7 +28,10 @@ while ( have_posts() ) : the_post();
 	$i		= 1;
 	?>
 		<div data-filter=".<?php echo strtolower($title) ?>-gallery" class="cb-gallery-item photo-menu">
-			<?php echo wp_get_attachment_image($header_photo,"full") ?>
+			<div class="photo-menu-content-box">
+				<?php echo wp_get_attachment_image($header_photo,"full") ?>
+				<?php the_title('<h3 class="photo-menu-title">','</h3>') ?>
+			</div>
 		</div>
 	<?php
 	while ( $fields[ 'image_'.$i ] ): ?>

@@ -25,12 +25,12 @@ get_header();
 			
 			<div class="telly-toggle">
 				<div class="telephone-icon">
-					Icon
+					<?php echo wp_get_attachment_image(173, "full"); ?>
 				</div>
 				<div class ="telephone-content">
 					<span class="telephone-content-wrapper">
 						<div class="telephone-toggle-content">
-							413.555.5555
+							<span>Call Us</span><br/>413.695.6487
 						</div>
 					</span>
 				</div>
