@@ -200,9 +200,6 @@ h1.navbar-brand {
 	background-size: cover;
 	position: relative;
 }
-h1.slogan {
-	font-size: 28px;
-}
 
 /* Frontpage Welcome */
 #frontpage-welcome {
@@ -493,7 +490,7 @@ h3.image-title {
 /* Footer */
 #wrapper-footer, #cta-bar {
 	position: relative;
-	z-index: 1;
+	z-index: 15;
 }
 /* CTA Bar */
 #cta-bar{
@@ -558,12 +555,11 @@ h3.image-title {
 }
 
 /* Extra Small Devices */
-@media(min-width: 450px) {
+@media(max-width: 767px) {
 	/* Frontpage Hero */
 	.hero-text {
-		font-size: 1.5rem;
-		min-width: 350px;
-		font-family: "tangerine", cursive;
+		font-size: 38px;
+		font-family: "Tangerine", cursive;
 	}
 }
 /* Small Devices */
@@ -637,18 +633,9 @@ h3.image-title {
 /* Medium Devices */
 @media(min-width: 768px) {	
 	/* Frontpage Hero */
-	.slogan.cta-span-1,
-	.slogan.cta-span-2,
-	.cta-phone-button{
-		font-family: 'Lora', serif;
-		font-size: 35px;
-	}
-	.slogan.cta-line-3 {
-		font-size: 28px;
-		margin-top: 15px;
-	}
-	.slogan.cta-span-1 {
-		margin-right: 70px;
+	.hero-text {
+		font-family: "Tangerine", cursive;
+		font-size: 45px;
 	}
 	/* Medium Frontpage Welcome */
 	#frontpage-welcome-text {
@@ -737,6 +724,21 @@ h3.image-title {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
 	}
+
+		/* CTA */
+	.slogan.cta-span-1,
+	.slogan.cta-span-2,
+	.cta-phone-button{
+		font-family: 'Lora', serif;
+		font-size: 35px;
+	}
+	.slogan.cta-line-3 {
+		font-size: 28px;
+		margin-top: 15px;
+	}
+	.slogan.cta-span-1 {
+		margin-right: 70px;
+	}
 } /*end min-width: 768px*/
 
 @media(min-width: 768px) and (max-width: 1011px){
@@ -794,10 +796,10 @@ h3.image-title {
 		height: calc(100vh - 115px);
 	}
 	.header-content .slogan {
-		font-size: 45px;
+		font-size: 65px;
 		width: auto;
 		width: 700px;
-		line-height: 1.5;
+		line-height: 1.25;
 		padding: 0 45px;
 	}
 
