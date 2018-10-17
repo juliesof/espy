@@ -15,6 +15,7 @@ while ( $services -> have_posts()): $services -> the_post(); //for each post in 
 	$header_image = get_field('header_photo'); //don't even need post ID since we are already in the post
 	$service_headers[] = $header_image; //push image ID on 
 endwhile;
+wp_reset_postdata();
 ?>
 <section id="frontpage-services" class="mt-5">
 	<div class="text-center mb-5">

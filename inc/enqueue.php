@@ -34,6 +34,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 		wp_enqueue_script( 'jquery');
 
+		wp_enqueue_script( 'images-loaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'), '4.1.4'  );
+
 		wp_enqueue_script( 'creative-js', get_template_directory_uri() . '/js/creative.js', array('jquery'), 1 );
 
 		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '3.0.6' );

@@ -17,10 +17,13 @@
 	Extra Small Devices
 * Frontpage Hero
 
+	Small Devices
+* Small Frontpage Testimonials
+* Small Frontpage Galleries
+* Small Block Template
+
 	Medium Devices
-* Medium Frontpage Testimonials
-* Medium Frontpage Galleries
-* Medium Block Template
+
 
 	Large Devices
 * Large Frontpage Welcome
@@ -103,7 +106,9 @@ h1.navbar-brand {
 	line-height: 1.2;
 }
 .header-color {
-	background-color: #849D7A; /*sage green*/
+	background-color: #849D7A;/*sage green*/
+	background-color: #85915c;/*KJC green half shade*/
+	background-color: #7c915c;
 }
 .header-content {
 	position: absolute;
@@ -112,6 +117,7 @@ h1.navbar-brand {
 	line-height: 1.5;
 	margin-right: auto;
 	margin-left: auto;
+	min-width: 320px;
 	top: 48%;
 	left: 50%;
 	transform: translate( -50%, -50%);
@@ -125,6 +131,13 @@ h1.navbar-brand {
 		rgba(50, 50, 50, .4) 87%,
 		rgba(255, 230, 255, 0) 100%
 		);
+	/*background: linear-gradient( 
+		to right, transparent, 
+		rgb(239, 228, 206), 
+		rgba(239, 228, 206, .4) 14%, 
+		rgba(239, 228, 206, .7) 50%, 
+		rgba(239, 228, 206, .4) 87%, 
+		transparent 100% );*/
 	color: white;
 	line-height: 1.5;
 	margin-bottom: 15px;
@@ -164,6 +177,7 @@ h1.navbar-brand {
 	/*border-radius: 97.5px;*/
 	padding-left: 10px;
 }
+
 .telephone-content-wrapper {
 	position: relative;
 }
@@ -202,6 +216,7 @@ h1.slogan {
 #frontpage-welcome-text{
 	max-width: 90%;
 	background-color: #849D7A;
+	background-color: #85915c;/*current site green half shade*/
 	color: #FFEEC6;
 	font-size: 19px;
 	border-radius: 10px;
@@ -280,10 +295,57 @@ h1.slogan {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin: 2rem 0;
+	margin: 2rem -15px;
 }
 .fp-testimonial {
+	width: 100%;
+	position: relative;
 	margin-bottom: 1rem;
+	height: 550px;
+}
+.testimonial-1 .corner-3, .testimonial-1 .corner-4,
+.testimonial-2 .corner-1, .testimonial-2 .corner-2 {
+	display: none;
+}
+.testimonial-1 {
+	height: 562px;
+}
+.testimonial-2 {
+	height: 370px;
+}
+/*border frame images*/
+.testimonial-image-box {
+	position: absolute;
+	transform: scale(.25);
+}
+.corner-1 {
+	transform-origin: top left;
+	top:0;
+	left:0;
+}
+.corner-2 {
+	transform-origin: top right;
+	top:0;
+	right:0;
+}
+.corner-3 {
+	transform-origin: bottom left;
+	bottom:0;
+	left:0;
+}
+.corner-4 {
+	transform-origin: bottom right;
+	bottom: 0;
+	right: 0;
+}
+.corner-2 img {
+	transform: scaleX(-1);
+}
+.corner-3 img {
+	transform: scaleY(-1);
+}
+.corner-4 img {
+	transform: scale(-1);
 }
 .fp-testimonial .quote-text {
 	position: absolute;
@@ -298,8 +360,11 @@ h1.slogan {
 /* fluid 3 columns */
 .fp-gallery-item {
 	width: 100%;
-	height: 250px;
+	height: auto;
 	padding: 20px;
+}
+#fp-gallery-grid {
+	margin-bottom: 2rem;
 }
 #fp-gallery-grid .gallery-inner {
 	height: 89%;
@@ -363,6 +428,19 @@ h3.image-title {
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
+.photo-menu-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+.photo-menu-content-box::before {
+	content:'';
+	position: absolute;
+	top: 10px; right: 10px; bottom: 10px; left: 10px;
+	background-color: rgba(0,0,0,0.3);
+}
 .cb-gallery-item,
 .cb-gallery-spacer,
 .cb-gallery-item--width-2 {
@@ -381,6 +459,7 @@ h3.image-title {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: auto;
+	min-width: 250px;
 	background: linear-gradient(
 		to right, 
 		rgba(255, 230, 255, 0),
@@ -392,28 +471,19 @@ h3.image-title {
 	color: #FFEEC6;
 	color: white;
 	line-height: 1.5;
-	min-width: 350px;
-	font-size: 70px;
+	font-size: 30px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 .bottom-images .row {
 	padding-bottom: 2rem;
 }
-.single-service-block {
-	height: calc(9 / 16 * 100vw);
-	overflow: hidden;
-}
-.single-service-block.col-md-6 {
-	height: calc(9 / 16 * 100vw / 2);
-}
-.single-service-block.col-md-4 {
-	height: calc(9 / 16 * 100vw / 3);
-}
 .single-service-block img {
 	width: 100%;
 }
-
+.single-service-block:first-child {
+	padding-bottom: 2rem;
+}
 /* Single Block Template */
 .block-element img {
 	margin-left: auto;
@@ -421,22 +491,62 @@ h3.image-title {
 }
 
 /* Footer */
-
+#wrapper-footer, #cta-bar {
+	position: relative;
+	z-index: 1;
+}
 /* CTA Bar */
 #cta-bar{
 	padding-top: 17px;
 	padding-bottom: 15px;
-	background-color: #3C2E3D;
+	background-color: #3C2E3D;/*purple*/
+	background-color: #85915c;/*KT green*/
 	max-height: 360px;
 	text-align: center;
 }
 #cta-bar .slogan {
-	color: #FFEEC6;
+	color: #FFEEC6; /*reddish vanilla*/
+	color: #fff;
 }
-
+.cta-span-1 {
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+}
+.cta-phone-button {
+	border-width: 0;
+	border-color: transparent;
+	font-weight: 400;
+	cursor: pointer;
+	position: relative;
+	font-size: 24px;
+	font-family: inherit;
+	margin: 0;
+	margin-bottom: 15px;
+	overflow: hidden;
+	background: rgba(255,255,255,0.4);
+	-webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	padding: 6px 15px;
+	border-radius: 5px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b9870d), color-stop(1, #fbc951));
+	background-image: -webkit-linear-gradient(top, #b9870d 0%, #fbc951 100%);
+	background-image: linear-gradient(99deg, #b9870d 0%, #fbc951 100%);
+	background-image: -webkit-linear-gradient(99deg, #b9870d 0%, #fbc951 100%);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.cta-phone-button:hover,
+.cta-phone-button:focus {
+  opacity: 0.75;
+}
+.cta-line-3 {
+	font-size: 20px;
+}
 /* Sub-Footer */
 #wrapper-footer {
-	background-color: #6F6170;
+	background-color: #6F6170;/*lighter purple*/
+	background-color: #616d3a;/*darker KT green*/
 	color: white;
 }
 #wrapper-footer a {
@@ -453,15 +563,16 @@ h3.image-title {
 	.hero-text {
 		font-size: 1.5rem;
 		min-width: 350px;
+		font-family: "tangerine", cursive;
 	}
 }
-/* Medium Devices */
+/* Small Devices */
 @media(min-width: 576px) {
 
 	/* Utilities */
 	h1 {
 		font-family: 'Lora', serif;
-		font-size: 60px;
+		font-size: 40px;
 	} 
 	/* Frontpage Hero */
 	.bounce {
@@ -476,16 +587,23 @@ h3.image-title {
 	}
 	.scroll-icon {
 		background-color: #FFEEC6;
+		background-color: #ffe9bb;/*a more orangy vanilla - KJC*/
 		height: 60px;
 		width: 60px;
 		border-radius: 50%;
 		display: table;
+	}
+	.scroll-icon img {
+		/*position: absolute;
+		top: -154px;
+		left: 5px;*/
 	}
 	.scroll-icon i.fa {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
 		color: #333;
+		color: #32332e;/*greenish grey - KJC green*/
 	}
 /*.scroll-icon .action-arrow {
 	border: solid 2px white;
@@ -500,29 +618,41 @@ h3.image-title {
 	.fp-service-item .service-header {
 		font-size: 35px;
 	}
+	/* Frontpage Testimonials */
+	.testimonial-image-box {
+		transform: scale(.33333);
+	}
 	/* Frontpage Gallery */
 	.fp-gallery-item {
 		width: 50%;
 		height: 250px;
 		padding: 20px;
 	}
+	/*----- Single Services Template Page*/
+	.service-entry-title{
+		min-width: 350px;
+		font-size: 40px;
+	}
 }
+/* Medium Devices */
 @media(min-width: 768px) {	
 	/* Frontpage Hero */
 	.slogan.cta-span-1,
-	.slogan.cta-span-2{
+	.slogan.cta-span-2,
+	.cta-phone-button{
 		font-family: 'Lora', serif;
-		font-size: 44px;
+		font-size: 35px;
 	}
 	.slogan.cta-line-3 {
 		font-size: 28px;
-		margin-top: 15px
+		margin-top: 15px;
 	}
 	.slogan.cta-span-1 {
 		margin-right: 70px;
 	}
 	/* Medium Frontpage Welcome */
 	#frontpage-welcome-text {
+		box-shadow: 0 0 20px 0px rgba(133, 145, 92, 0.71);
 		max-width: 65%;
 		padding: 2.5% 2.5% 1% 2.5%;
 		font-size: 22px;
@@ -560,14 +690,28 @@ h3.image-title {
 	}
 	/*----- Frontpage Testimonials */
 	.fp-testimonial .quote-text {
-		padding-top: 3rem;
+		/*padding-top: 3rem;*/
 	}
 	/*----- Frontpage Gallery */
 	.gallery-sizer,
 	.fp-gallery-item {
 		width: 33.33333%;
-		height: 320px;
+		height: auto;
 		padding: 20px;
+	}
+	/*----- Medium Services Page*/
+	.single-service-block {
+		height: calc(9 / 16 * 100vw);
+		overflow: hidden;
+	}
+	.single-service-block.col-md-6 {
+		height: calc(9 / 16 * 100vw / 2);
+	}
+	.single-service-block.col-md-4 {
+		height: calc(9 / 16 * 100vw / 3);
+	}
+	.single-service-block:first-child {
+		padding-bottom: 0;
 	}
 	/*----- Medium Block Template*/
 	.block-container {
@@ -660,7 +804,15 @@ h3.image-title {
 	/* Large Frontpage Testimonial */
 	/* force testimonials into two columns*/
 	.fp-testimonial {
-		max-width: 50%;
+		width: 40%;
+	}
+	.testimonial-1, .testimonial-2 {
+		height: 500px;
+	}
+	/*show all frame corners*/
+	.testimonial-1 .corner-3, .testimonial-1 .corner-4,
+	.testimonial-2 .corner-1, .testimonial-2 .corner-2 {
+		display: block;
 	}
 	/* Portfolio Gallery Page */
 	#cb-gallery-grid {
@@ -672,7 +824,7 @@ h3.image-title {
 		overflow:hidden;
 	}
 	.service-entry-title {
-		font-size: 91px;
+		font-size: 70px;
 		padding-left: 35px;
 		padding-right: 35px;
 		width: 70%;
@@ -693,8 +845,8 @@ h3.image-title {
 }
 @media(min-width: 1200px) {
 	.fp-testimonial p {
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}	
 } /*end min-width 1200px*/
 

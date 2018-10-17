@@ -30,7 +30,7 @@ get_header();
 				<div class ="telephone-content">
 					<span class="telephone-content-wrapper">
 						<div class="telephone-toggle-content">
-							<span class="text-center">Call Us</span><br/>413.695.6487
+							<span>Call Us</span><br/>413.695.6487
 						</div>
 					</span>
 				</div>
