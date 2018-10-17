@@ -137,14 +137,15 @@ h1.navbar-brand {
 /* Constant Telephone Icon */
 .telephone-content {
 	position: fixed;
-	bottom: 1rem;
+	bottom: 1.5rem;
 	left: 1rem;
 	background-color: #FFEEC6;
+	background-color: rgba(255, 238, 198, 0.75);
 	z-index: 45;
 	cursor: pointer;
-	height: 60px;
-	width: 210px;
-	border-radius: 35px;
+	height: 90px;
+	width: 195px;
+	border-radius: 45px;
 	transition: transform 0.3s ease-out;
 	transform: scaleX(1);
 	transform-origin: left;
@@ -152,25 +153,24 @@ h1.navbar-brand {
 }
 .telephone-icon {
 	position: fixed;
-	bottom: 2rem;
-	left: 2rem;
+	bottom: 2.75rem;
+	left: 1.43rem;
 	z-index: 15;
 	cursor: pointer;
 }
 .telephone-content.telephone-small {
-	transform: scaleX(.29);
+	transform: scaleX(.42);
 	border-radius: 50%;
-}
-.telephone-icon.icon-small {
-	left: 1.75rem;
+	/*border-radius: 97.5px;*/
+	padding-left: 10px;
 }
 .telephone-content-wrapper {
 	position: relative;
 }
 .telephone-toggle-content {
 	position: absolute;
-	left: 80px;
-	top: 9px;
+	left: 85px;
+	top: 13px;
 }
 .telephone-content.telephone-small .telephone-toggle-content {
 	display: none;
