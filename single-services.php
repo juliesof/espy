@@ -149,14 +149,14 @@ $container   = 'container-fluid';
 
 			<?php endwhile; // end of the loop. ?>
 
-			<div class="telly-toggle">
-				<div class="telephone-icon">
-					Icon
-				</div>
+			<div class="telly-toggle d-sm-inline d-none">
+			<div class="telephone-icon">
+				<?php echo wp_get_attachment_image(140, full); ?>
+			</div>
 				<div class ="telephone-content">
 					<span class="telephone-content-wrapper">
 						<div class="telephone-toggle-content">
-							413.555.5555
+							<span class="d-lg-inline d-none">Call Us</span><br/>413.695.6487
 						</div>
 					</span>
 				</div>
