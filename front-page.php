@@ -23,14 +23,14 @@ get_header();
 
 			<?php endwhile; // end of the loop. ?>
 			
-			<div class="telly-toggle">
+			<div class="telly-toggle d-sm-inline d-none">
 				<div class="telephone-icon">
-					<?php echo wp_get_attachment_image(173, "full"); ?>
+					<?php echo wp_get_attachment_image(140, full); ?>
 				</div>
 				<div class ="telephone-content">
 					<span class="telephone-content-wrapper">
 						<div class="telephone-toggle-content">
-							<span>Call Us</span><br/>413.695.6487
+							<span class="d-lg-inline d-none">Call Us</span><br/>413.695.6487
 						</div>
 					</span>
 				</div>

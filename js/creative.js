@@ -17,10 +17,17 @@ jQuery( document ).ready(function( $ ){
 
 
 	// Front Page Services Grid
-	var $servicesGrid = $('#fp-services-grid');
-	$servicesGrid.isotope({
-		itemSelector:	'.fp-service-item'
-	}); // end frontpage SERVICES function
+	// var $servicesGrid = $('#fp-services-grid');
+	// $servicesGrid.isotope({
+	// 	itemSelector:	'.fp-service-item'
+	// }); // end frontpage SERVICES function
+
+	//Front Page Gallery Section
+	var $servicesGrid = $('#fp-services-grid').imagesLoaded( function(){
+		$servicesGrid.isotope({
+			itemSelector: '.fp-service-item'
+		});
+	}); // end frontpage GALLERIES function
 
 	//Front Page Gallery Section
 	var $fp_gallery = $('#fp-gallery-grid').imagesLoaded( function(){

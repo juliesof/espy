@@ -1,7 +1,7 @@
 <div id="hero" class="row">	
 	<div class="header-content">
 		<h1 
-			class="slogan" 
+			class="slogan hero-text" 
 			data-aos="fade-in" 
 			data-aos-delay="150"
 			data-aos-duration="2000">

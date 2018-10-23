@@ -154,9 +154,7 @@ h1.navbar-brand {
 	line-height: 1.2;
 }
 .header-color {
-	background-color: #849D7A;/*sage green*/
-	background-color: #85915c;/*KJC green half shade*/
-	background-color: #7c915c;
+	background-color: #7c915c;/*KJC green half shade*/
 }
 .header-content {
 	position: absolute;
@@ -197,33 +195,33 @@ h1.navbar-brand {
 
 /* Constant Telephone Icon */
 .telephone-content {
-position: fixed;
-bottom: 1.5rem;
-left: 1rem;
-background-color: #FFEEC6;
-background-color: rgba(255, 238, 198, 0.75);
-z-index: 45;
-cursor: pointer;
-height: 90px;
-width: 195px;
-border-radius: 45px;
-transition: transform 0.3s ease-out;
-transform: scaleX(1);
-transform-origin: left;
-z-index: 10;
+	position: fixed;
+	bottom: 1.5rem;
+	left: 1rem;
+	background-color: #FFEEC6;
+	background-color: rgba(255, 238, 198, 0.75);
+	z-index: 45;
+	cursor: pointer;
+	height: 90px;
+	width: 195px;
+	border-radius: 45px;
+	transition: transform 0.3s ease-out;
+	transform: scaleX(1);
+	transform-origin: left;
+	z-index: 10;
 }
 .telephone-icon {
-position: fixed;
-bottom: 2.75rem;
-left: 1.43rem;
-z-index: 15;
-cursor: pointer;
+	position: fixed;
+	bottom: 2.75rem;
+	left: 1.43rem;
+	z-index: 15;
+	cursor: pointer;
 }
 .telephone-content.telephone-small {
-transform: scaleX(.42);
-border-radius: 50%;
-/*border-radius: 97.5px;*/
-padding-left: 10px;
+	transform: scaleX(.42);
+	border-radius: 50%;
+	/*border-radius: 97.5px;*/
+	padding-left: 10px;
 }
 
 .telephone-content-wrapper {
@@ -231,9 +229,8 @@ padding-left: 10px;
 }
 .telephone-toggle-content {
 	position: absolute;
-	left: 80px;
-	top: 9px;
-
+	left: 85px;
+	top: 13px;
 }
 .telephone-content.telephone-small .telephone-toggle-content {
 	display: none;
@@ -249,9 +246,6 @@ padding-left: 10px;
 	background-size: cover;
 	position: relative;
 }
-h1.slogan {
-	font-size: 28px;
-}
 
 /* Frontpage Welcome */
 #frontpage-welcome {
@@ -264,8 +258,7 @@ h1.slogan {
 }
 #frontpage-welcome-text{
 	max-width: 90%;
-	background-color: #849D7A;
-	background-color: #85915c;/*current site green half shade*/
+	background-color: #7c915c;/*current site green half shade*/
 	color: #FFEEC6;
 	font-size: 19px;
 	border-radius: 10px;
@@ -289,6 +282,7 @@ h1.slogan {
 	padding: 10px;
 	overflow: hidden;
 	cursor: pointer;
+	position: relative;
 }
 .fp-service-item img {
 	width: 100%;
@@ -320,7 +314,7 @@ h1.slogan {
 	background-color: rgba(60, 46, 61, 0.5);
 }
 .fp-service-item .service-header {
-	font-size: 31px;
+	font-size: 30px;
 }
 /*hover action*/
 .fp-service-item:hover img {
@@ -546,14 +540,13 @@ h3.image-title {
 /* Footer */
 #wrapper-footer, #cta-bar {
 	position: relative;
-	z-index: 1;
+	z-index: 15;
 }
 /* CTA Bar */
 #cta-bar{
 	padding-top: 17px;
 	padding-bottom: 15px;
-	background-color: #3C2E3D;/*purple*/
-	background-color: #85915c;/*KT green*/
+	background-color: #7c915c;/*KT green*/
 	max-height: 360px;
 	text-align: center;
 }
@@ -593,13 +586,15 @@ h3.image-title {
 .cta-phone-button:focus {
   opacity: 0.75;
 }
+.cta-button-wrapper a {
+	text-decoration: none;
+}
 .cta-line-3 {
 	font-size: 20px;
 }
 /* Sub-Footer */
 #wrapper-footer {
-	background-color: #6F6170;/*lighter purple*/
-	background-color: #616d3a;/*darker KT green*/
+	background-color: #5a6d3d;/*darker KT green*/
 	color: white;
 }
 #wrapper-footer a {
@@ -611,12 +606,11 @@ h3.image-title {
 }
 
 /* Extra Small Devices */
-@media(min-width: 450px) {
+@media(max-width: 767px) {
 	/* Frontpage Hero */
 	.hero-text {
-		font-size: 1.5rem;
-		min-width: 350px;
-		font-family: "tangerine", cursive;
+		font-size: 38px;
+		font-family: "Tangerine", cursive;
 	}
 }
 /* Small Devices */
@@ -669,7 +663,7 @@ h3.image-title {
 }*/
 	/* Frontpage Services */
 	.fp-service-item .service-header {
-		font-size: 35px;
+		font-size: 30px;
 	}
 	/* Frontpage Testimonials */
 	.testimonial-image-box {
@@ -690,18 +684,9 @@ h3.image-title {
 /* Medium Devices */
 @media(min-width: 768px) {	
 	/* Frontpage Hero */
-	.slogan.cta-span-1,
-	.slogan.cta-span-2,
-	.cta-phone-button{
-		font-family: 'Lora', serif;
-		font-size: 35px;
-	}
-	.slogan.cta-line-3 {
-		font-size: 28px;
-		margin-top: 15px;
-	}
-	.slogan.cta-span-1 {
-		margin-right: 70px;
+	.hero-text {
+		font-family: "Tangerine", cursive;
+		font-size: 45px;
 	}
 	/* Medium Frontpage Welcome */
 	#frontpage-welcome-text {
@@ -737,9 +722,6 @@ h3.image-title {
 	.fp-service-item--width1 {
 		width: 33.33333%;
 		height: 200px;
-	}
-	.fp-service-item .service-header {
-		font-size: 38px;
 	}
 	/*----- Frontpage Testimonials */
 	.fp-testimonial .quote-text {
@@ -790,7 +772,36 @@ h3.image-title {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
 	}
+
+		/* CTA */
+	.slogan.cta-span-1,
+	.slogan.cta-span-2,
+	.cta-phone-button{
+		font-family: 'Lora', serif;
+		font-size: 35px;
+	}
+	.slogan.cta-line-3 {
+		font-size: 28px;
+		margin-top: 15px;
+	}
+	.slogan.cta-span-1 {
+		margin-right: 70px;
+	}
 } /*end min-width: 768px*/
+@media(max-width: 1011px) {
+	.telephone-icon {
+		transform: scale(.70);
+	}
+	.telephone-content {
+		height: 75px;
+		width: 187px;
+		bottom: 1.85rem;
+	}
+	.telephone-toggle-content {
+		top: -8px;
+		left: 72px;
+	}
+}
 
 @media(min-width: 768px) and (max-width: 1011px){
 	#fp-gallery-grid .gallery-inner {
@@ -857,10 +868,10 @@ h3.image-title {
 		height: calc(100vh - 115px);
 	}
 	.header-content .slogan {
-		font-size: 45px;
+		font-size: 65px;
 		width: auto;
 		width: 700px;
-		line-height: 1.5;
+		line-height: 1.25;
 		padding: 0 45px;
 	}
 
@@ -904,6 +915,11 @@ h3.image-title {
 	/* photo menu */
 	.cb-gallery-item.photo-menu {
 		width: 33.33333%;
+	}
+}
+@media (min-width: 1024px){
+	.fp-service-item .service-header {
+		font-size: 46px;
 	}
 }
 @media(min-width: 1200px) {
