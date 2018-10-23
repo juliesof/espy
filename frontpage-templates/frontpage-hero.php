@@ -1,4 +1,5 @@
 <div id="hero" class="row">	
+	<!-- Hero background photo: css background image -->
 	<div class="header-content">
 		<h1 
 			class="slogan hero-text" 
