@@ -42,13 +42,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 
+					<?php 
+						//Site title side - window graphic
+						echo '<div id="title-logo-wrapper">';
+						echo wp_get_attachment_image(186,"full");
+						echo '</div>';
+					?>
+					<?php 
+						//Menu side - window graphic (translucent)
+						// echo '<div id="menu-logo-wrapper">';
+						// echo wp_get_attachment_image(188,"full");
+						// echo '</div>';
+					?>
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
+
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<h1 class="navbar-brand mb-0"><a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							</h1>
 
 						<?php endif; ?>
 

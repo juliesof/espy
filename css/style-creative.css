@@ -3,6 +3,8 @@
 	Base
 * Utilities
 * Keyframes
+* Site Title/Navbar
+* Typography
 * Constant Telephone Icon
 * Frontpage Hero
 * Frontpage Welcome
@@ -82,8 +84,54 @@
 		transform: translateY(-15px);
 	}
 }
-
-
+/*----- Site Title/Navbar*/
+#wrapper-navbar {
+	position: relative;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+#wrapper-navbar::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: #946800;
+}
+#wrapper-navbar .navbar::before {
+	position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #e2b13e;
+}
+#wrapper-navbar .container {
+	align-items: flex-end;
+}
+/* Title Logo Window */
+#title-logo-wrapper {
+	height: 100px;
+}
+#title-logo-wrapper img {
+	transform: scale(.7);
+	transform-origin: top center;
+}
+/* Menu Logo Window (translucent) */
+#menu-logo-wrapper {
+	position: absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	opacity: .5;
+}
+#menu-logo-wrapper img {
+	height: 100%;
+	width: auto;
+}
+/*----- Typography */
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'Cormorant Garamond', serif;
@@ -197,7 +245,7 @@ padding-left: 10px;
 /* Frontpage Hero */
 #hero {
 	height: 50vh;
-	background: center no-repeat url('/espy/wp-content/uploads/2018/08/kitchen-hero.jpeg');
+	background: center no-repeat url('/espy/wp-content/uploads/2018/08/kitchen-1.jpg');
 	background-size: cover;
 	position: relative;
 }
@@ -435,6 +483,10 @@ h3.image-title {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	color: #fff;
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+.photo-menu-content-box {
+	position: relative;
 }
 .photo-menu-content-box::before {
 	content:'';
@@ -771,7 +823,7 @@ h3.image-title {
 /* Large Devices */
 @media(min-width: 992px) {
 
-	/* Utilities */
+	/* Typography */
 	h1 {
 	font-family: 'Lora', serif;
 	font-size: 50px;
@@ -784,8 +836,18 @@ h3.image-title {
 		font-size: 30px;
 	}
 	h1.navbar-brand {
-		font-size: 30px;
+		font-size: 34px;
 	}
+	#main-menu li {
+		font-size: 25px;
+	}
+	#main-menu .nav-link {
+		color: #fff;
+	}
+	#main-menu .active .nav-link {
+		color: #ffc02d;
+	}
+
 /* Large Frontpage Hero */
 	#hero {
 		width: 100vw;
