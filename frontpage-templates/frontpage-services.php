@@ -31,7 +31,11 @@ wp_reset_postdata();
 			$img_alt = get_post_meta( $image_ID, '_wp_attachment_image_alt', true );
 			?>
 			<div class="service-image">
-				<img src="<?php echo esc_attr($image_url); ?>" srcset="<?php echo esc_attr($image_srcset); ?>" alt="<?php echo $img_alt ?>">
+				<img 
+					src="<?php echo esc_attr($image_url); ?>" 
+					srcset="<?php echo esc_attr($image_srcset); ?>" 
+					alt="<?php echo $img_alt ?>"
+					sizes="(min-width: 768px) 33vw, 100vw">
 			</div>
 			<h3 class="service-header">New Construction</h3>
 		</article>
@@ -44,7 +48,11 @@ wp_reset_postdata();
 			$img_alt = get_post_meta( $image_ID, '_wp_attachment_image_alt', true );
 			?>
 			<div class="service-image">
-				<img src="<?php echo esc_attr($image_url); ?>" srcset="<?php echo esc_attr($image_srcset); ?>" alt="<?php echo $img_alt ?>">
+				<img 
+					src="<?php echo esc_attr($image_url); ?>" 
+					srcset="<?php echo esc_attr($image_srcset); ?>" 
+					alt="<?php echo $img_alt ?>"
+					sizes="(min-width: 768px) 66vw, 100vw">
 			</div>
 			<h3 class="service-header">Restoration and Renovation</h3>
 		</article>
@@ -57,7 +65,11 @@ wp_reset_postdata();
 			$img_alt = get_post_meta( $image_ID, '_wp_attachment_image_alt', true );
 			?>
 			<div class="service-image">
-				<img src="<?php echo esc_attr($image_url); ?>" srcset="<?php echo esc_attr($image_srcset); ?>" alt="<?php echo $img_alt ?>">
+				<img 
+					src="<?php echo esc_attr($image_url); ?>" 
+					srcset="<?php echo esc_attr($image_srcset); ?>" 
+					alt="<?php echo $img_alt ?>"
+					sizes="(min-width: 768px) 33vw, 100vw">
 			</div>
 			<h3 class="service-header">Architectural Detective Work</h3>
 		</article>
@@ -70,7 +82,11 @@ wp_reset_postdata();
 			$img_alt = get_post_meta( $image_ID, '_wp_attachment_image_alt', true );
 			?>
 			<div class="service-image">
-				<img src="<?php echo esc_attr($image_url); ?>" srcset="<?php echo esc_attr($image_srcset); ?>" alt="<?php echo $img_alt ?>">
+				<img 
+					src="<?php echo esc_attr($image_url); ?>" 
+					srcset="<?php echo esc_attr($image_srcset); ?>" 
+					alt="<?php echo $img_alt ?>"
+					sizes="(min-width: 768px) 66vw, 100vw">
 			</div>
 			<h3 class="service-header">Green Practices</h3>
 		</article>
@@ -83,7 +99,11 @@ wp_reset_postdata();
 			$img_alt = get_post_meta( $image_ID, '_wp_attachment_image_alt', true );
 			?>
 			<div class="service-image">
-				<img src="<?php echo esc_attr($image_url); ?>" srcset="<?php echo esc_attr($image_srcset); ?>" alt="<?php echo $img_alt ?>">
+				<img 
+					src="<?php echo esc_attr($image_url); ?>" 
+					srcset="<?php echo esc_attr($image_srcset); ?>" 
+					alt="<?php echo $img_alt ?>"
+					sizes="(min-width: 768px) 33vw, 100vw">
 			</div>
 			<h3 class="service-header">Real Estate Purchase Consultation</h3>
 		</article>

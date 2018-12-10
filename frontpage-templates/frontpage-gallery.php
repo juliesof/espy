@@ -1,45 +1,50 @@
-<section id="fp-gallery" class="mt-md-5">
-	<h1 class="fp-section-header text-center mb-lg-4 mb-xs-2">Explore Our Work</h1>
-	<div id="fp-gallery-grid">
-		<div class="fp-gallery-item">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/menu-interior.jpg">
-				<h3 class="image-title">Interiors</h3>
-			</div>
-		</div>
-		<div class="fp-gallery-item">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/ext-3.jpg">
-				<h3 class="image-title">Exteriors</h3>
-			</div>
-		</div>
+<?php
+/**
+ * Displays the Homepage Gallery
+ *
+ */
 
-		<div class="fp-gallery-item">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/menu-kitchen.jpg">
-				<h3 class="image-title">Kitchens</h3>
-			</div>
-		</div>
+// Begin custom gallery query
 
-		<div class="fp-gallery-item">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/menu-bath.jpg">
-				<h3 class="image-title">Baths</h3>
-			</div>
-		</div>
+$gallery = new WP_Query( array( 'post_type' => 'galleries'));
 
-		<div class="fp-gallery-item">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/menu-cabinet.jpg">
-				<h3 class="image-title">Cabinetry</h3>
-			</div>
-		</div>
+wp_reset_postdata();// End custom gallery query
+?>
+<section id="fp-gallery">
+	<h1 class="text-center">Galleries</h1>
+	<div id="fp-gallery-grid" class="container">
+		<div class="row">
+			
+			<?php	
+			// loop the gallery posts and display each featured image
+			while( $gallery -> have_posts() ): $gallery -> the_post(); 
 
-		<div class="fp-gallery-item fp-gallery-item-last">
-			<div class="gallery-inner">
-				<img src="/espy/wp-content/uploads/2018/08/menu-bef-aft.jpg">
-				<h3 class="image-title">Before &amp; After</h3>
-			</div>
-		</div>
-	</div>
-</section>
+				$image_id = get_field('header_photo');
+				$image_srcset = wp_get_attachment_image_srcset($image_id,'full');
+			
+				$image_url = wp_get_attachment_image_url( $image_id, "med-large" );
+			
+				$img_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true);
+				global $post;
+				$slug = $post->post_name;
+				$slug = '/galleries/#'.$slug
+			?>
+				<div class="fp-gallery-item col-sm-6 col-lg-4">
+					<a href="<?php echo esc_url( home_url( $slug ) ); ?>">	
+						<div class="fp-gallery-inner">
+							<h3 class="image-title"><?php the_title(); ?></h3>
+							<img
+								src = "<?php echo esc_attr( $image_url ); ?>"
+								srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+								sizes = "(max-width: 575px) 80vw, (max-width: 991) 40vw, 30vw"
+								alt = "<?php echo $image_alt; ?>"
+							>
+		 				</div><!-- .fp-gallery-inner -->
+		 			</a>
+				</div><!-- .fp-gallery-item -->
+			<?php endwhile;?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #fp-gallery -->
+
+

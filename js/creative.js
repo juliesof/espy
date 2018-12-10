@@ -3,82 +3,128 @@
  *
  */
 jQuery( document ).ready(function( $ ){
-	// //Frontpage service grid
-	// var $servicesGrid = $('#services-grid')
-	// $servicesGrid.isotope({
-	// 	itemSelector:	'.grid-item',
-	// 	percentPosition: true,
-	// 	masonry: {
-	// 		columnWidth: '.grid-sizer'
-	// 	}
-	// }); // end frontpage SERVICES function
 
-	// Front Page animated scroll-down arrow
-
-
-	// Front Page Services Grid
-	// var $servicesGrid = $('#fp-services-grid');
-	// $servicesGrid.isotope({
-	// 	itemSelector:	'.fp-service-item'
-	// }); // end frontpage SERVICES function
-
-	//Front Page Gallery Section
-	var $servicesGrid = $('#fp-services-grid').imagesLoaded( function(){
-		$servicesGrid.isotope({
-			itemSelector: '.fp-service-item'
-		});
-	}); // end frontpage GALLERIES function
-
-	//Front Page Gallery Section
-	var $fp_gallery = $('#fp-gallery-grid').imagesLoaded( function(){
-		$fp_gallery.isotope({
-			itemSelector: '.fp-gallery-item'
-		});
-	}); // end frontpage GALLERIES function
-
-	//Portfolio Gallery Page
-	var $textMenu 	= $( '#cb-gallery-buttons' );
-		$galMenu	= $( '.photo-menu' )
-		$galGrid 	= $( '#cb-gallery-grid' ).imagesLoaded( function(){
-			$galGrid.isotope({
-				itemSelector: '.cb-gallery-item',
-				percentPosition: true,
-				filter: '.photo-menu',
-				stagger: 30,
-				masonry: {
-					columnWidth: '.cb-gallery-spacer'
-				}
-			});
-		});
-	$textMenu.on('click','button',function(){
-		var filterValue = $(this).attr('data-filter');
-		$galGrid.isotope({ filter: filterValue });
+	//insert spans into site title for to stack in small screen widths
+	var $siteTitle = $('.site-title');
+		$titleWords = $siteTitle.text().split(" ");
+		$count 		= 0;
+	//remove current text from site title
+	$siteTitle.empty();
+	// loop each word in the site title and wrap them in spans
+	$.each($titleWords, function(i, v) {
+		$siteTitle.append($("<span class='span-" + $count + "'>").text(v + " "));
+		$count++;
 	});
-	$galMenu.click(function(){
-		var firstClick = $(this).attr('data-filter');
-		$galGrid.isotope({ filter: firstClick });
-		$textMenu.removeClass('d-none')
-	});
+
+	// after spans are created unhide the header content
+	var $headerWrapper = $('.header-hide');
+	if($headerWrapper){
+		$headerWrapper.removeClass('header-hide');
+	}
+
+	// size hero image to fill viewport
+	if ($('body').hasClass('home')){
+		var $hero = $('#hero');
+		function heroHeight(){
+			if( $(window).width() > 992 ) {
+					$navbar = $('#wrapper-navbar');
+					$height = $(window).height() - $navbar.height();
+				$hero.css({'height':$height});
+			}else {
+				$hero.css({'height':'50vh'});
+			}
+		}
+		//run on page load
+		heroHeight();
+		//run on page resize
+		$(window).resize(heroHeight);
+	}
 
 
 	//toggle floating telephone icon number
-	var $tellyToggle 		= $('.telephone-content');
+	var $tellyToggle 		= $('.telly-toggle');
 	var $tellyToggleIcon 	= $('.telephone-icon'); 
-
 	$(window).one('scroll', function(){
-		$tellyToggle.toggleClass('telephone-small');
-		$tellyToggleIcon.toggleClass('icon-small');
+		$tellyToggle.removeClass('expanded-icon');
 	});
-
-	$('.telly-toggle').on('click', function(){
-		$tellyToggle.toggleClass('telephone-small');	
-		$tellyToggleIcon.toggleClass('icon-small');	
+	$tellyToggle.on('click', function(){
+		$tellyToggle.toggleClass('expanded-icon');
 	}); 
-
 	// end TELEPHONE-icon functionality
 
 
-// smooth scrolling for internal page links.  Many thanks to Chris Coyier of css tricks
+	//-----Isotope
+	//
+	//Front Page Services Section
+	var $servicesGrid = $('#fp-services-grid').isotope({
+		itemSelector: '.fp-service-item'
+	}); // end frontpage SERVICES function
+	
+	//
+	//CB Gallery Page
+	var $textMenu 	= $( '#cb-gallery-menu' );
+		$galButtons	= $( '#cb-gallery-buttons' );
+		$galMenu	= $( '.photo-menu' );
+		$galWelcome	= $( '#gallery-welcome' );
+	//Filter gallery with hashtag in url
+	var $hashID = '.' + window.location.hash.substring(1);// Store # parameter and add "." before hash
+		$initFilter = '';
+	if ($hashID == '.') {
+		$initFilter = '.photo-menu';
+	} else {
+		$initFilter = $hashID;
+		$('button[data-filter="'+$hashID+'"]').addClass('active-category');
+		$textMenu.removeClass( 'd-none' );
+		$galMenu.addClass( 'd-none' );
+		$galWelcome.addClass( 'd-none' );
+	}
+	var	$cb_gallery = $( '#cb-gallery-grid' ).isotope({
+			itemSelector: '.cb-gallery-item',
+			stagger: 10,
+			filter: $initFilter,
+			percentPosition: true,
+			masonry: {		
+				columnWidth: '.cb-gallery-spacer'
+			}
+		});
+	//show content when isotope finishes loading
+	$cb_gallery.imagesLoaded().removeClass('gallery-hidden');
+	// trigger isotope filter when button or photo menu is clicked
+	var $galleryMenuButton = $('#cb-gallery-menu' > 'button');
+	$galleryMenuButton.on('click','button',function(){
+		var filterValue = $(this).attr('data-filter');
+		$cb_gallery.isotope({ filter: filterValue });
+	});
+	$galMenu.click(function(){
+		var $firstClick = $(this).attr('data-filter');
+		$('button[data-filter="'+$firstClick+'"]').addClass( 'active-category' );
+		$cb_gallery.isotope({ filter: $firstClick });
+		$textMenu.removeClass('d-none');
+		$galMenu.addClass( 'd-none' );
+		$galWelcome.addClass( 'd-none' );
+	});
+	//Change color of gallery menu button on click (active category) 
+	$galButtons.on('click','button',function(){
+		var $filterValue = $(this).attr( 'data-filter' );
+		$( '#cb-gallery-buttons>button' ).removeClass( 'active-category' );
+		$(this).addClass( 'active-category' );
+		$cb_gallery.isotope({ filter: $filterValue });
+		if ($filterValue == '.all-images'){
+			$cb_gallery.isotope('shuffle');
+		}
+	});
+	// featherlight addons
+	$('.exteriors-category').featherlightGallery({
+		
+			nextIcon: 'next zzzzzzzz',
+			previousIcon: 'xxxxxx previous',
+			gallerFadeIn: 900,
+		
+	});
+	//End CB Gallery
+
+
+	// smooth scrolling for internal page links.  Many thanks to Chris C of css tricks
 		// Select all links with hashes
 		var $allLinks = $('a[href*="#"]')
 		$allLinks

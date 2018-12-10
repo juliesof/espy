@@ -2,18 +2,18 @@
 
 // Custom post types function 
 function create_custom_post_types(){
-// Create gallery/portfolio post type
-	register_post_type('portfolio',
+// Create gallery post type
+	register_post_type('galleries',
 		array(
 		'labels' => array(
-			'name' => __('Portfolio'),
-			'singular_name' => __('Portfolio'),
+			'name' => __('Galleries'),
+			'singular_name' => __('Gallery'),
 			),
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
 		'rewrite' => array (
-			'slug' => 'portfolio'
+			'slug' => 'galleries'
 			),
 		)
 	);

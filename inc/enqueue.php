@@ -20,11 +20,14 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		// creative custom styling and scripts
 		wp_enqueue_style( 'creative-styles',
 			get_stylesheet_directory_uri() . '/css/style-creative.css', array(), 1 );
-
+		// Featherlight Stylesheet
+		wp_enqueue_style( 'featherlight-styles', get_stylesheet_directory_uri() . '/css/featherlight.min.css', array(), '1.7.13' );
+		// Featherlight Gallery Stylesheet
+		wp_enqueue_style( 'featherlight-gallery-styles', get_stylesheet_directory_uri() . '/css/featherlight.gallery.min.css', array(), '1.7.13' );
 		// enqueue animation library AOS
 
 		// register js file with the AOS init function
-		wp_register_script('aosInit', get_template_directory_uri() . '/js/aosInit.js', array(), null, 1);
+		wp_register_script('aosInit', get_template_directory_uri() . '/js/aosInit.js', array('jquery'), null, 1);
 
 		// enqueue the AOS css stylesheet
 		wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
@@ -35,6 +38,10 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'jquery');
 
 		wp_enqueue_script( 'images-loaded-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'), '4.1.4'  );
+		// Featherlight JS
+		wp_enqueue_script( 'featherlight-js', get_stylesheet_directory_uri() . '/js/featherlight.min.js', array('jquery'), '1.7.13' );
+		// Featherlight gallery JS
+		wp_enqueue_script( 'featherlight-gallery-js', get_stylesheet_directory_uri() . '/js/featherlight.gallery.min.js', array('jquery'), '1.7.13' );
 
 		wp_enqueue_script( 'creative-js', get_template_directory_uri() . '/js/creative.js', array('jquery'), 1 );
 

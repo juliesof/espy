@@ -77,6 +77,6 @@ require get_template_directory() . '/inc/editor.php';
 
 // CB Additions
 /**
- * Load Editor functions.
+ * Custom Image Sizes
  */
 require get_template_directory() . '/inc/cb-custom-image-sizes.php';

@@ -42,18 +42,19 @@ get_header();
 
 	<?php endwhile; // end of the loop. ?>
 	
-	<div class="telly-toggle d-sm-inline d-none">
-			<div class="telephone-icon">
-				<?php echo wp_get_attachment_image(140, full); ?>
-			</div>
-			<div class ="telephone-content">
-				<span class="telephone-content-wrapper">
-					<div class="telephone-toggle-content">
-						<span class="d-lg-inline d-none">Call Us</span><br/>413.695.6487
-					</div>
-				</span>
+	<div class="telly-toggle expanded-icon d-sm-inline d-none">
+		<div class ="telephone-content">
+			<div class="telephone-toggle-content">
+				<div class="telephone-toggle-content-frame">
+					<div class="d-lg-inline d-none">Call Us</div>
+					<div>413.695.6487</div>
+				</div>
 			</div>
 		</div>
+		<div class="telephone-icon-frame">
+			<i class="fa fa-phone fa-2x"></i>
+		</div>
+	</div>
 </div><!-- Container end -->
 
 <?php get_footer(); ?>

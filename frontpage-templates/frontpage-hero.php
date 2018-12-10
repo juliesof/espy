@@ -1,5 +1,19 @@
 <div id="hero" class="row">	
-	<!-- Hero background photo: css background image -->
+	<?php 
+		$hero_image = get_post_thumbnail_id();
+		$hero_srcset = wp_get_attachment_image_srcset( $hero_image, 'full' );
+		$hero_url = wp_get_attachment_image_url($hero_image, 'large');
+		$img_alt = get_post_meta( $hero_image, '_wp_attachment_image_alt', true );
+	?>
+	<div class="hero-image-wrapper">
+		<img 
+			id="hero-image" 
+			src="<?php echo esc_attr($hero_url); ?>" 
+			srcset="<?php echo esc_attr($hero_srcset); ?>" 
+			alt="<?php echo $img_alt ?>"
+			sizes="100vw"
+		>
+	</div>
 	<div class="header-content">
 		<h1 
 			class="slogan hero-text" 
@@ -11,7 +25,7 @@
 	</div>
 	<a href="#frontpage-welcome" class="bounce">
 		<div class="scroll-icon">
-			<?php echo wp_get_attachment_image(179, "full"); ?>
+			<i class="fa fa-caret-down fa-2x"></i>
 		</div>
 	</a>
 </div>

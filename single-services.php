@@ -1,7 +1,6 @@
-	<?php
+<?php
 /**
  * The template for displaying the individual service pages.
- * Template Name: Homepage Services
  *
  * @package understrap
  */
@@ -55,17 +54,30 @@ $container   = 'container-fluid';
 				</header><!-- .entry-header -->
 
 				<section class="service-content container">
-					<?php the_content(); ?>
+					<div class="service-content-box">
+						<?php the_content(); ?>
+					</div>
 				</section>
 
-				<section class="bottom-images container-fluid">
+				<section class="bottom-images container">
 
 					<?php // 1 image layout
 						if( $img_count == 1) { 
 					?>
 						<div class="row">
-							<div class="single-service-block col-12 d-flex justify-content-center align-items-center">
-								<?php echo wp_get_attachment_image($image_1, "full") ?>
+							<div class="single-service-block col-sm-6 offset-sm-3 d-flex justify-content-center align-items-center">
+								<div class="service-image-frame">
+									<?php 
+										$image_srcset = wp_get_attachment_image_srcset($image_1,'xlarge');
+										$image_url = wp_get_attachment_image_url( $image_1, "med-large" );
+										$img_alt = get_post_meta( $image_1, '_wp_attachment_image_alt', true);?>
+									<img 
+										src="<?php echo esc_attr( $image_url ); ?>" 
+										srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+										sizes = "(max-width: 575px) 95vw, 45vw"
+										alt = "<?php echo $image_alt; ?>"
+									>
+								</div>
 							</div>
 						</div>
 
@@ -73,11 +85,33 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 2 ) { 
 					?>
 					<div class="row">
-						<div class="single-service-block col-md-6">
-							<?php echo wp_get_attachment_image($image_1, "full") ?>
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+										$image_srcset = wp_get_attachment_image_srcset($image_1,'xlarge');
+										$image_url = wp_get_attachment_image_url( $image_1, "med-large" );
+										$img_alt = get_post_meta( $image_1, '_wp_attachment_image_alt', true);?>
+									<img 
+										src="<?php echo esc_attr( $image_url ); ?>" 
+										srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+										sizes = "(max-width: 575px) 95vw, 45vw"
+										alt = "<?php echo $image_alt; ?>"
+									>
+							</div>
 						</div>
-						<div class="single-service-block col-md-6">
-							<?php echo wp_get_attachment_image($image_2, "full") ?>
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+										$image_srcset = wp_get_attachment_image_srcset($image_2,'xlarge');
+										$image_url = wp_get_attachment_image_url( $image_2, "med-large" );
+										$img_alt = get_post_meta( $image_2, '_wp_attachment_image_alt', true);?>
+									<img 
+										src="<?php echo esc_attr( $image_url ); ?>" 
+										srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+										sizes = "(max-width: 575px) 95vw, 45vw"
+										alt = "<?php echo $image_alt; ?>"
+									>
+							</div>
 						</div>
 					</div>
 					
@@ -85,61 +119,193 @@ $container   = 'container-fluid';
 						} elseif( $img_count == 3 ) { 
 					?>
 					<div class="row">
-						<div class="single-service-block col-md-4">
-							<?php echo wp_get_attachment_image($image_1, "full") ?>
+						<div class="single-service-block col-sm-4">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_1,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_1, "med-large" );
+									$img_alt = get_post_meta( $image_1, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
+							</div>
 						</div>
-						<div class="single-service-block col-md-4">
-							<?php echo wp_get_attachment_image($image_2, "full") ?>
+						<div class="single-service-block col-sm-4">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_2,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_2, "med-large" );
+									$img_alt = get_post_meta( $image_2, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
+							</div>
 						</div>
-						<div class="single-service-block col-md-4">
-							<?php echo wp_get_attachment_image($image_3, "full") ?>
+						<div class="single-service-block col-sm-4">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_3,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_3, "med-large" );
+									$img_alt = get_post_meta( $image_3, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
+							</div>
 						</div>
 					</div>	
 
 					<?php  // 4 image layout
 						} elseif( $img_count == 4 ) { 
 					?>
-						<div class="row">
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_1, "full") ?>
+					<div class="row">
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_1,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_1, "med-large" );
+									$img_alt = get_post_meta( $image_1, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_2, "full") ?>
+						</div>
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_2,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_2, "med-large" );
+									$img_alt = get_post_meta( $image_2, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-						</div> <!-- end row 1 -->
+						</div>
+					</div> <!-- end row 1 -->
 
-						<div class="row">
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_3, "full") ?>
+					<div class="row">
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_3,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_3, "med-large" );
+									$img_alt = get_post_meta( $image_3, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_4, "full") ?>
+						</div>
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_4,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_4, "med-large" );
+									$img_alt = get_post_meta( $image_4, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-						</div> <!-- end row 2 -->
+						</div>
+					</div> <!-- end row 2 -->
 
 					<?php  // 5 image layout
 						} elseif( $img_count == 5 ) { 
 					?>
-						<div class="row">
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_1, "full") ?>
+					<div class="row">
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_1,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_1, "med-large" );
+									$img_alt = get_post_meta( $image_1, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-							<div class="single-service-block col-md-6">
-								<?php echo wp_get_attachment_image($image_2, "full") ?>
+						</div>
+						<div class="single-service-block col-sm-6">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_2,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_2, "med-large" );
+									$img_alt = get_post_meta( $image_2, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 45vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-						</div> <!-- end row 1 -->
+						</div>
+					</div> <!-- end row 1 -->
 
-						<div class="row">
-							<div class="single-service-block col-md-4 pb-2 pb-md-0">
-								<?php echo wp_get_attachment_image($image_3, "full") ?>
+					<div class="row">
+						<div class="single-service-block col-sm-4 pb-2 pb-sm-0">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_3,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_3, "med-large" );
+									$img_alt = get_post_meta( $image_3, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-							<div class="single-service-block col-md-4 d-none d-md-block">
-								<?php echo wp_get_attachment_image($image_4, "full") ?>
+						</div>
+						<div class="single-service-block col-sm-4 d-none d-sm-block">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_4,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_4, "med-large" );
+									$img_alt = get_post_meta( $image_4, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-							<div class="single-service-block col-md-4 d-none d-md-block">
-								<?php echo wp_get_attachment_image($image_5, "full") ?>
+						</div>
+						<div class="single-service-block col-sm-4 d-none d-sm-block">
+							<div class="service-image-frame">
+								<?php 
+									$image_srcset = wp_get_attachment_image_srcset($image_5,'xlarge');
+									$image_url = wp_get_attachment_image_url( $image_5, "med-large" );
+									$img_alt = get_post_meta( $image_5, '_wp_attachment_image_alt', true);?>
+								<img 
+									src="<?php echo esc_attr( $image_url ); ?>" 
+									srcset = "<?php echo esc_attr( $image_srcset ); ?>"
+									sizes = "(max-width: 575px) 95vw, 30vw"
+									alt = "<?php echo $image_alt; ?>"
+								>
 							</div>
-						</div> <!-- end row 2 -->
+						</div>
+					</div> <!-- end row 2 -->
 
 					<?php } else { // no images ?>
 						<div></div>
@@ -149,19 +315,19 @@ $container   = 'container-fluid';
 
 			<?php endwhile; // end of the loop. ?>
 
-			<div class="telly-toggle d-sm-inline d-none">
-			<div class="telephone-icon">
-				<?php echo wp_get_attachment_image(140, full); ?>
-			</div>
+			<div class="telly-toggle expanded-icon d-sm-inline d-none">
 				<div class ="telephone-content">
-					<span class="telephone-content-wrapper">
-						<div class="telephone-toggle-content">
-							<span class="d-lg-inline d-none">Call Us</span><br/>413.695.6487
+					<div class="telephone-toggle-content">
+						<div class="telephone-toggle-content-frame">
+							<div class="d-lg-inline d-none">Call Us</div>
+							<div>413.695.6487</div>
 						</div>
-					</span>
+					</div>
+				</div>
+				<div class="telephone-icon-frame">
+					<i class="fa fa-phone fa-2x"></i>
 				</div>
 			</div>
-
 		</main><!-- #main -->
 
 </div><!-- .row -->
